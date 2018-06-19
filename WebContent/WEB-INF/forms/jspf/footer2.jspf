@@ -1,0 +1,113 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<style>
+	#footer li .icon_index{
+		background-image: url("/images/technician1.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	#footer li .icon_mesg{
+		background-image: url("/images/technician1.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	#footer li .icon_dd{
+		background-image: url("/images/dingdan01.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	#footer li .icon_mine{
+		background-image: url("/images/technicianfooter3.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	
+	#footer li.active .icon_index{
+		background-image: url("/images/technician2.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	#footer li.active .icon_mesg{
+		background-image: url("/images/technician2.png");
+		background-position: center center;
+		background-repeat: no-repeat;	
+	}
+	#footer li.active .icon_dd{
+		background-image: url("/images/dingdan02.png");
+		background-position: center center;
+		background-repeat: no-repeat;	
+	}
+	#footer li.active .icon_mine{
+		background-image: url("/images/technicianfooter4.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+    .tips{
+    width:.1rem;
+    height:.1rem;
+    -webkit-border-radius:.1rem;
+    border-radius:.1rem;
+    background-color:red;
+    display:block;
+    position:absolute;
+    top: .19rem;
+    left: 3.25rem;
+}
+</style>
+<footer id="footer" class="foot t_border cf ">
+	<ul class="cf footer1-4-1">
+		<li class="${footerUrl == 'FrmOrderTech' ? 'active' : ''}">
+			<a href="javascript:void(0);" id="order">
+				<i class="icon icon_dd"></i>
+				<span>订单</span>
+			</a>
+			<c:if test="${!empty msgNum && msgNum > 0}">
+				<span class="mark"></span>
+			</c:if>
+		</li>
+		<li class="${footerUrl == 'FrmMessage' ? 'active' : ''}">
+			<a href="javascript:void(0);" id="msgs">
+				<i class="icon icon_index">
+                    <c:if test="${messageCount>0 }">
+                        <span class="tips"></span><!-- 未阅读 -->
+                    </c:if>
+                </i>
+				<span>消息 </span>
+			</a>
+		</li>
+		<li class="${footerUrl == 'FrmTechMy' ? 'active' : ''}">
+			<a href="javascript:void(0);" id="myde">
+				<i class="icon icon_mine"></i>
+				<span>我的</span>
+			</a>
+		</li>
+	</ul>
+</footer>
+</body>
+<script>
+$(function(){
+	$("#order").click(function(){
+		window.location.href="FrmOrderTech";
+	});
+	$("#msgs").click(function(){
+		window.location.href="FrmMessageType?CorpNo_=727111";
+	});
+	$("#myde").click(function(){
+		window.location.href="FrmTechMy";
+	});
+	
+	$('#footer ul li').on('click',function(){
+		$(".loadingbox").show();
+		setTimeout(function(){
+			$(".loadingbox").hide();
+			winBox("请求失败,请重新操作");
+		}, 8000);
+	});
+	$('#bodys').on('click','a',function(){
+		$(".loadingbox").show();
+	});
+})
+</script>
+</html>

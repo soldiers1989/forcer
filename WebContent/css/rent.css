@@ -1,0 +1,99 @@
+.main_content{
+    font-family: MicrosoftYaHei;
+    width: 100%;
+    height: 100%;
+    /*background-color: white;*/
+}
+.more img{
+    width: .34rem;
+}
+#mat1{
+    height: .769rem;
+}
+#mat2{
+    height: 1.538rem;
+}
+.text-danger{
+    color: #c90d00 !important;
+}
+.text-gold{
+    color: #a0791a !important;
+}
+.classify_sort{
+    height: .68rem;
+    line-height: .68rem;
+    background-color: white;
+}
+.classify_sort li{
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+}
+.classify_sort li a{
+    display: inline-block;
+    height: 96%;
+    font-size: 0.273rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #4d4d4d;
+}
+.classify_sort .navActive a{
+    color: #a0791a;
+    border-bottom: 1px solid #a0791a;
+}
+
+.online_commodityList{
+    padding: .17rem 0 0;
+}
+.online_commodityList li{
+    width: 46%;
+    margin-left: .17rem;
+    margin-bottom: .17rem;
+    float: left;
+    text-align: center;
+    background-color: white;
+    height: 4rem;
+}
+.online_commodityList li a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.homepage_commodity_img{
+    height: 1.9rem;
+}
+.homepage_commodity_name{
+    padding: .255rem;
+    text-align: left;
+    font-size: .221rem;
+    font-weight: normal;
+    font-stretch: normal;
+    /* line-height: .34rem; */
+    letter-spacing: 1px;
+    color: #333333;
+}
+.red{
+    color: #c90d00;
+}
+.old_price{
+    color: #999999;
+    text-decoration: line-through;
+}
+.homepage_commodity_price{
+    text-align: left;
+    padding-left: .17rem;
+}
+.homepage_commodity_price .red{
+    font-size: .306rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    margin-right: .34rem;
+}
+.homepage_commodity_price .old_price{
+    font-size: .187rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+}

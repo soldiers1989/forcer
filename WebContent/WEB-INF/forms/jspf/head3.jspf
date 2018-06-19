@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<style>
+	
+</style>
+<div id="controlCard">
+	<%-- <option value="">${mainCard == checkCard ? '管理其他卡' : '返回主卡' }</option>
+	
+		<option class="healthCard"
+			${item.items.cardNo == checkCard ? "selected='selected'" : ""}
+			value="${item.items.cardNo}">${item.items.cardNo}</option>
+	 --%>
+	<ul>
+		<c:forEach items="${cards}" var="item">
+			<c:if test="${item.key == checkCard }">
+				<li><a href="FrmCardPage.changeCard?checkCard=${item.key}"class="bomb_active">${item.key}</a></li>
+			</c:if>
+			<c:if test="${item.key != checkCard }">
+				<li><a href="FrmCardPage.changeCard?checkCard=${item.key}">${item.key}</a></li>
+			</c:if>
+		</c:forEach>
+	</ul>
+</div>
+<div id="controlCard_backg"></div>
+

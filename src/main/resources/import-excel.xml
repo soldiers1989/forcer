@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <bean id="FrmNodeIn" class="cn.cerc.jimport.excel.Template" scope="prototype">
+        <property name="fileName" value="电子标签表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jimport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="主电子条码" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+      <bean id="FrmCustomer" class="cn.cerc.jimport.excel.Template" scope="prototype">
+        <property name="fileName" value="客户认证资料" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jimport.excel.StringColumn">
+                    <property name="code" value="userCode_" />
+                    <property name="name" value="用户手机号(主键)" />
+                </bean>
+                <bean class="cn.cerc.jimport.excel.StringColumn">
+                    <property name="code" value="source_" />
+                    <property name="name" value="资料来源" />
+                </bean>
+                <bean class="cn.cerc.jimport.excel.StringColumn">
+                    <property name="code" value="attributes_" />
+                    <property name="name" value="用户属性" />
+                </bean>
+                <bean class="cn.cerc.jimport.excel.StringColumn">
+                    <property name="code" value="dataRen_" />
+                    <property name="name" value="资料责任人" />
+                </bean>
+                 <bean class="cn.cerc.jimport.excel.StringColumn">
+                    <property name="code" value="status_" />
+                    <property name="name" value="状态" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

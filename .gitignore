@@ -1,0 +1,13 @@
+#.gitignore
+*.bak
+db/
+servers/
+momoda/.settings/
+momoda/WebContent/WEB-INF/forms/common/user_register.jsp
+*.war
+*.ear
+*.bak
+momoda/src/main/resources/app-menus.xml
+/target/
+*/target/*
+/bin/

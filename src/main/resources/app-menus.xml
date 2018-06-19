@@ -1,0 +1,715 @@
+﻿<?xml-stylesheet type="text/xsl" href="app-menus.xsl"?>
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="app-menus.xsd">
+	<head>
+		<title>系统菜单定义</title>
+	</head>
+	<body>
+		<!-- 手机配置 -->
+		<item code="Default" name="测试欢迎页" proccode="all.public" parent="Default" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.common.forms.Default" />
+			<access verlist="0,1," />
+		</item>
+        <!-- 微信登录相关 -->
+        <item code="FrmWeixin" name="微信登录" proccode="all.public" parent="FrmWeiXin" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.common.forms.FrmWeiXin" />
+            <access verlist="0,1," />
+        </item>
+		<!-- 用户登陆欢迎页面 -->
+		<item code="Welcome" name="用户登陆验证" proccode="all.public" parent="Welcome" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.login.forms.FrmLogin" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 用户登陆验证 -->
+		<item code="FrmLogin" name="用户登陆验证" proccode="all.public" parent="FrmLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.login.forms.FrmLogin" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台登录 -->
+		<item code="FrmAdminLogin" name="一启享后台" proccode="all.public" parent="FrmAdminLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.admin.forms.FrmAdminLogin" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台忘记密码 -->
+		<item code="FrmForgetPassword" name="忘记密码" proccode="all.public" parent="FrmAdminLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.admin.forms.FrmForgetPassword" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台修改密码 -->
+		<item code="FrmEditPhonePaswd" name="修改密码" proccode="all.public" parent="FrmAdminLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.admin.forms.FrmEditPhonePaswd" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 发送验证码 -->
+		<item code="FrmSendValidateCode" name="发送验证码" proccode="all.public" parent="FrmAdminLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.login.forms.FrmSendValidateCode" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台首页 -->
+		<item code="FrmAdminIndex" name="后台首页" proccode="all.public" parent="FrmAdminLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.admin.forms.FrmAdminIndex" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 广告管理 -->
+		<item code="FrmAdminHomeAdManage" name="广告管理 " proccode="all.public" parent="FrmAdminHomeAdManage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmAdminHomeAdManage" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 评价管理-->
+		<item code="FrmEvaluate" name="评价管理 " proccode="all.public" parent="FrmEvaluate" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmEvaluate" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 租赁商品的详情微信 -->
+		<item code="FrmWeiPro" name="租赁商品的详情微信 " proccode="all.public" parent="FrmWeiPro" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmWeiPro" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 租赁商品的微信 -->
+		<item code="FrmRentWei" name="租赁商品微信首页 " proccode="all.public" parent="FrmRentWei" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmRentWei" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 入库单查询列表 -->
+		<item code="FrmSale_queryRK" name="售卖商品管理  " proccode="all.public" parent="FrmSale_queryRK" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmSale_queryRK" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 售卖商品管理 -->
+		<item code="FrmSale_proManage" name="售卖商品管理  " proccode="all.public" parent="FrmSale_proManage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmSale_proManage" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 商品名称管理 -->
+		<item code="FrmAdminPro" name="商品管理 " proccode="all.public" parent="FrmAdminPro" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmAdminPro" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台角色管理 -->
+		<item code="FrmRoleData" name="后台角色管理" proccode="all.public" parent="FrmAdminLogin" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.admin.forms.FrmRoleData" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台角色权限管理 -->
+		<item code="FrmUserManagerData" name="后台角色权限管理" proccode="all.public" parent="FrmUserManagerData" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.admin.forms.FrmUserManagerData" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 租赁商品管理 -->
+		<item code="FrmAdminRentPro" name="租赁商品管理 " proccode="all.public" parent="FrmAdminRentPro" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmAdminRentPro" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 按照机柜查询物品存放 -->
+		<item code="FrmQueryPro_ByCabinet" name="按照机柜查询物品存放 " proccode="all.public" parent="FrmQueryPro_ByCabinet" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmQueryPro_ByCabinet" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 按照物品电子条码查询 -->
+		<item code="FrmNode_queryUpdate" name="按照物品电子条码查询" proccode="all.public" parent="FrmNode_queryUpdate" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmNode_queryUpdate" />
+			<access verlist="0,1," />
+		</item>
+		<!--供应商管理 -->
+		<item code="FrmAdminSupply" name="供应商管理" proccode="all.public" parent="FrmAdminSupply" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmAdminSupply" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 用户端租凭 -->
+		<item code="FrmOrder_Lease" name="用户端租凭" proccode="all.public" parent="FrmOrder_Lease" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.my.forms.FrmOrder_Lease" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 商品分类管理 -->
+		<item code="FrmAdminProType" name="商品分类管理 " proccode="all.public" parent="FrmAdminProType" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.product.forms.FrmAdminProType" />
+				<access verlist="0,1," />
+		</item>
+		<!-- 运维地图定位 -->
+		<item code="FrmMap" name="地图定位" proccode="all.public" parent="FrmMap" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.map.forms.FrmMap" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 扫一扫 -->
+		<item code="FrmSys" name="扫一扫" proccode="all.public" parent="FrmSys" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.map.forms.FrmWeiXinSaoYiSao" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 使用指南 -->
+		<item code="FrmGuideList" name="使用指南" proccode="all.public" parent="FrmGuideList" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.my.forms.FrmGuideList" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 用户端订单 -->
+		<item code="FrmOrder_My" name="后台首页" proccode="all.public" parent="FrmOrder_My" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.my.forms.FrmOrder_My" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 地址管理 -->
+		<item code="FrmAdrmanage" name="后台首页" proccode="all.public" parent="FrmAdrmanage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.my.forms.FrmAdrmanage" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台机柜管理 -->
+		<item code="FrmMyBoxGroupManage" name="机柜管理" proccode="all.public" parent="" hide="false" security="false">
+		      <web process="release" pageno="900" class="com.huagu.box.manage.forms.FrmMyBoxGroupManage" />
+		      <access verlist="0,1," />
+		</item>
+		<!-- 后台机柜管理详情查看 -->
+		<item code="FrmMyBoxGroupLookDetail" name="机柜详情" proccode="all.public" parent="" hide="false" security="false">
+		  <web process="release" pageno="900" class="com.huagu.box.manage.forms.FrmMyBoxGroupLookDetail" />
+		  <access verlist="0,1," />
+		</item>
+		<!-- 用户端机柜详情查看 -->
+		<item code="FrmMyBoxGroup" name="机柜详情查看" proccode="all.public" parent="" hide="false" security="false">
+		  <web process="release" pageno="900" class="com.huagu.box.front.forms.FrmMyBoxGroup" />
+		  <access verlist="0,1," />
+		</item>
+		<!-- 后台订单送货上门 -->
+		<item code="FrmDeliveryorder" name="后台首页" proccode="all.public" parent="FrmDeliveryorder" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.order.forms.FrmDeliveryorder" />
+			<access verlist="0,1," />
+		</item>	
+		<!-- 更多 -->
+		<item code="FrmMore" name="更多" proccode="all.public" parent="Adrmanage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.more.forms.FrmMore" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 我的服务 -->
+		<item code="FrmMyServices" name="我的服务" proccode="all.public" parent="Adrmanage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.myService.forms.FrmMyServices" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 二维码生成器 -->
+		<item code="QrcodeUtil" name="二维码生成器" proccode="all.public" parent="Adrmanage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.common.tools.QrcodeUtil" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 意见反馈 -->
+		<item code="FrmFeedback" name="后台首页" proccode="all.public" parent="FrmFeedBack" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.my.forms.FrmFeedBack" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 文章协议 -->
+		<item code="FrmRentPact" name="用户凭组" proccode="all.public" parent="FrmRentPact" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.consultation.forms.FrmRentPact" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 资讯管理列表 -->
+		<item code="FrmInformationList" name="用户凭组" proccode="all.public" parent="FrmInformationList" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.consultation.forms.FrmInformationList" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 各种协议内容页面  -->
+		<item code="FrmViewProtocol" name="用户凭组" proccode="all.public" parent="FrmViewProtocol" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.consultation.forms.FrmViewProtocol" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 我的钱包 -->
+		<item code="FrmMyWallet" name="我的钱包" proccode="all.public" parent="FrmFeedBack" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmMyWallet" />
+			<access verlist="0,1," />
+		</item>
+	
+		<!-- 积分签到管理 -->
+		<item code="FrmJifenSign" name="积分签到管理" proccode="all.public" parent="FrmJifenSign" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.jiFenAndSign.forms.FrmJifenSign" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 捐赠 -->
+		<item code="FrmDonation" name="捐赠" proccode="all.public" parent="FrmFeedBack" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.donation.forms.FrmDonation" />
+			<access verlist="0,1," />
+		</item>
+		
+		<!-- 消息管理，消息列表 -->
+		<item code="FrmNewslist" name="消息列表" proccode="all.public" parent="FrmNewslist" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.newslist.forms.FrmNewslist" />
+			<access verlist="0,1," />
+		</item>
+		
+		<!-- 帮助中心 -->
+		<item code="FrmHelpcenter" name="帮助中心" proccode="all.public" parent="FrmHelpcenter" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.helpcenter.forms.FrmHelpcenter" />
+			<access verlist="0,1," />
+		</item>
+		
+		<!-- 后台租赁自取订单 -->
+		<item code="FrmPickUpOrder" name="后台首页" proccode="all.public" parent="FrmPickUpOrder" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.order.forms.FrmPickUpOrder" />
+			<access verlist="0,1," />
+		</item>	
+		<!-- 后台送货上门订单 -->
+		<item code="FrmDeliveryGoHome" name="后台首页" proccode="all.public" parent="FrmDeliveryGoHome" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.order.forms.FrmDeliveryGoHome" />
+			<access verlist="0,1," />
+		</item>	
+
+		<!-- 优惠券发放 -->
+		<item code="FrmReleaseCoupon" name="优惠券发放" proccode="all.public" parent="FrmReleaseCoupon" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.coupon.forms.FrmReleaseCoupon" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 优惠券详情 -->
+		<item code="FrmCouponDetails" name="优惠券详情" proccode="all.public" parent="FrmCouponDetails" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.coupon.forms.FrmCouponDetails" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台积分记录 -->
+		<item code="FrmJiFenRecords" name="后台积分记录" proccode="all.public" parent="FrmJiFenRecords" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.jiFenAndSign.forms.FrmJiFenRecords" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台积分类型 -->
+		<item code="FrmJiFenType" name="后台积分类型" proccode="all.public" parent="FrmJiFenType" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.jiFenAndSign.forms.FrmJiFenType" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 后台签到记录 -->
+		<item code="FrmSignRecords" name="后台签到记录" proccode="all.public" parent="FrmSignRecords" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.jiFenAndSign.forms.FrmSignRecords" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 芝麻信用查看 -->
+		<item code="FrmSesame" name="芝麻信用查看" proccode="all.public" parent="FrmCouponDetails" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.common.sesame.FrmSesame" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 我的柜组 -->
+		<item code="FrmMyCabinet" name="我的柜组" proccode="all.public" parent="FrmMyCabinet" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.maintain.forms.FrmMyCabinet" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 我的柜组 -->
+		<item code="FrmAddCabinet" name="接收柜子信息接口" proccode="all.public" parent="FrmMyCabinet" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.maintain.forms.FrmAddCabinet" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 商务合作 -->
+		<item code="FrmBussiness" name="商务合作" proccode="all.public" parent="FrmBussiness" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.more.forms.FrmBussiness" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 编辑器上传图片 -->
+		<item code="FrmProductImage" name="编辑器上传图片" proccode="all.public" parent="FrmProductImage" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.common.forms.FrmProductImage" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 使用流程 -->
+		<item code="FrmUseProcess" name="使用流程" proccode="all.public" parent="FrmUseProcess" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.more.forms.FrmUseProcess" />
+			<access verlist="0,1," />
+		</item>
+
+		<!-- 代理商列表 -->
+		<item code="FrmAgent" name="代理商列表"  proccode="all.public" parent="FrmAgent" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.agentAndCom.forms.FrmAgent" />
+			<access verlist="0,1," />
+		</item>
+
+		<!-- 微信支付 -->
+		<item code="FrmWeixinPay" name="微信支付" proccode="all.public" parent="FrmWeixinPay" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.pay.forms.FrmWeixinPay" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 微信支付 -->
+		<item code="FrmWeixinWithdraw" name="微信提现" proccode="all.public" parent="FrmWeixinWithdraw" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.pay.forms.FrmWeixinWithdraw" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 微信支付回调 -->
+		<item code="FrmRechargeNotify" name="微信支付回调" proccode="all.public" parent="FrmRechargeNotify" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.pay.forms.FrmRechargeNotify" />
+			<access verlist="0,1," />
+		</item>
+
+		<!--社区列表 -->
+		<item code="FrmCommunity" name="社区列表" proccode="all.public" parent="FrmCommunity" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.agentAndCom.forms.FrmCommunity" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 微信支付回调 -->
+		<item code="FrmProDetails" name="运维端运维" proccode="all.public" parent="FrmProDetails" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.operate.forms.FrmProDetails" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 区域管理 -->
+		<item code="FrmArea" name="区域管理" proccode="all.public" parent="FrmArea" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.agentAndCom.forms.FrmArea" />
+			<access verlist="0,1," />
+		</item>
+		<!-- 订单与安卓对接 -->
+		<item code="FrmOrderInterface" name="订单与安卓对接" proccode="all.public" parent="FrmOrderInterface" hide="false" security="false">
+			<web process="release" pageno="900" class="com.huagu.order.forms.FrmOrderInterface" />
+			<access verlist="0,1," />
+		</item>
+		<item code="FrmSetUp" name="设置" proccode="all.public" parent="FrmSetUp" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.setUp.forms.FrmSetUp" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 个人资料 -->
+        <item code="FrmPersonalData" name="个人资料" proccode="all.public" parent="FrmPersonalData" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.setUp.forms.FrmPersonalData" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 服务协议 -->
+        <item code="FrmServiceAgreement" name="服务协议" proccode="all.public" parent="FrmServiceAgreement" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.setUp.forms.FrmServiceAgreement" />
+            <access verlist="0,1," />
+        </item>
+
+		 <!-- 财务管理 -->
+        <item code="FrmFinance" name="财务管理" proccode="all.public" parent="FrmFinance" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmFinance" />
+	    <access verlist="0,1," />
+        </item>
+
+        <!-- 优惠券是否使用 -->
+        <item code="FrmCouponState" name="优惠券是否使用" proccode="all.public" parent="FrmCouponState" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.coupon.forms.FrmCouponState" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 公益捐赠 -->
+        <item code="FrmDonationPicture" name="公益捐赠" proccode="all.public" parent="FrmDonationPicture" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.donation.forms.FrmDonationPicture" />
+            <access verlist="0,1," />
+        </item>
+        <!--签到说明-->
+        <item code="FrmSign" name="签到说明" proccode="all.public" parent="FrmSign" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.more.forms.FrmSign" />
+            <access verlist="0,1," />
+        </item>
+         <!--个人中心，我的积分管理-->
+        <item code="FrmIntegral" name="个人中心，我的积分管理" proccode="all.public" parent="FrmIntegral" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.more.forms.FrmIntegral" />
+	    <access verlist="0,1," />
+        </item>
+        <!-- 收藏-->
+        <item code="FrmCollect" name="收藏" proccode="all.public" parent="FrmMore" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.my.forms.FrmCollect" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 运维端（我的中心） -->
+        <item code="FrmMyCenter" name="我的中心" proccode="all.public" parent="FrmMyCenter" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.my.forms.FrmMyCenter" />
+            <access verlist="0,1," />
+        </item>
+        
+        <!-- 运维端（设置跳转） -->
+        <item code="FrmJumpPage" name="设置跳转" proccode="all.public" parent="FrmJumpPage" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.my.forms.FrmJumpPage" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 消息管理（运维端） -->
+        <item code="FrmNewslistYunWei" name="消息管理" proccode="all.public" parent="FrmNewslistYunWei" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.newslist.forms.FrmNewslistYunWei" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 附近柜模糊查询 -->
+        <item code="FrmMyBoxGroupfind" name="附近柜" proccode="all.public" parent="FrmMyBoxGroupfind" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.box.front.forms.FrmMyBoxGroupfind" />
+            <access verlist="0,1," />
+        </item>
+         <!-- 后台寄送到柜 -->
+        <item code="FrmDeliveryToBox" name="附近柜" proccode="all.public" parent="FrmDeliveryToBox" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmDeliveryToBo" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 消息分类 -->
+        <item code="FrmMessageClass" name="消息" proccode="all.public" parent="FrmMessageClass" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.newslist.forms.FrmMessageClass" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 导出excel -->
+        <item code="FrmExcel" name="导出excel" proccode="all.public" parent="" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.common.tools.FrmExcel" />
+            <access verlist="0,1," />
+        </item>
+
+        <!-- 消息管理 -->
+        <item code="FrmMessage" name="消息管理" proccode="all.public" parent="" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.common.forms.FrmMessage" />
+            <access verlist="0,1," />
+		 </item>
+        <!-- 导出excel -->
+        <item code="FrmControlImpl" name="导出excel" proccode="all.public" parent="" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.control.forms.FrmControlImpl" />
+            <access verlist="0,1," />
+        </item>
+         <!-- 查询系统消息（用户端）-->
+        <item code="FrmMessageList" name="查询系统消息" proccode="all.public" parent="FrmMessageList" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.newslist.forms.FrmMessageList" />
+            <access verlist="0,1," />
+        </item>
+         <!-- 社区服务（后台）-->
+        <item code="FrmCommunityList" name="社区服务" proccode="all.public" parent="FrmCommunityList" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.community.forms.FrmCommunityList" />
+            <access verlist="0,1," /> 
+        </item>
+        <!-- 疑难解答（后台）-->
+        <item code="FrmTroubleshooting" name="疑难解答" proccode="all.public" parent="FrmTroubleshooting" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.troubleshooting.forms.FrmTroubleshooting" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 物流管理-->
+        <item code="FrmLogistics" name="物流管理" proccode="all.public" parent="FrmLogistics" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmLogistics" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 用户管理（后台）-->
+        <item code="FrmgetUser" name="用户管理" proccode="all.public" parent="FrmgetUser" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.userList.forms.FrmgetUser" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 操作日志查询（后台）-->
+        <item code="FrmOperationLog" name="操作日志" proccode="all.public" parent="FrmOperationLog" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.logs.forms.FrmOperationLog" />
+            <access verlist="0,1," />
+        </item>
+         <!-- 箱柜区域管理-->
+        <item code="FrmBoxComm" name="箱柜区域管理" proccode="all.public" parent="FrmBoxComm" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.agentAndCom.forms.FrmBoxComm" />
+            <access verlist="0,1," />
+        </item>
+        <!--运维单-->
+        <item code="FrmYunWeiBill" name="运维单" proccode="all.public" parent="FrmYunWeiBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.ywManage.forms.FrmYunWeiBill" />
+            <access verlist="0,1," />
+        </item>
+        <!--调货单-->
+        <item code="FrmDiaoHuoBill" name="调货单" proccode="all.public" parent="FrmDiaoHuoBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.ywManage.forms.FrmDiaoHuoBill" />
+            <access verlist="0,1," />
+        </item>
+        <!--补货单-->
+        <item code="FrmAddGoodsBill" name="补货单" proccode="all.public" parent="FrmAddGoodsBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.ywManage.forms.FrmAddGoodsBill" />
+            <access verlist="0,1," />
+        </item>
+         <!--折损管理-->
+        <item code="FrmLossMgt" name="折损管理" proccode="all.public" parent="FrmLossMgt" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.ywManage.forms.FrmLossMgt" />
+            <access verlist="0,1," />
+       	</item>
+       	<!--前台运维管理-->
+        <item code="FrmYwManage" name="前台运维管理" proccode="all.public" parent="FrmYwManage" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.ywManage.forms.FrmYwManage" />
+            <access verlist="0,1," />
+        </item>
+       	<!--用户余额金额查询-->
+        <item code="FrmUserBalance" name="用户余额金额查询" proccode="all.public" parent="FrmUserBalance" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmUserBalance" />
+            <access verlist="0,1," />
+        </item>
+       	<!--后台财务总览-->
+        <item code="FrmFinanceOverview" name="后台财务总览" proccode="all.public" parent="FrmFinanceOverview" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmFinanceOverview" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台柜子图片展示 -->
+        <item code="FrmCabinetAdImg" name="后台柜子图片展示 " proccode="all.public" parent="FrmCabinetAdImg" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.maintain.forms.FrmCabinetAdImg" />
+            <access verlist="0,1," />
+        </item>
+        <!--赔付单前台展示 -->
+        <item code="FrmIndemnity" name="赔付单前台展示 " proccode="all.public" parent="FrmIndemnity" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.indemnity.forms.FrmIndemnity" />
+            <access verlist="0,1," />
+        </item>
+         <!--赔付单后台展示 -->
+        <item code="FrmIndemnityInfo" name="赔付单后台展示 " proccode="all.public" parent="FrmIndemnityInfo" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.indemnity.forms.FrmIndemnityInfo" />
+	    <access verlist="0,1," />
+        </item>
+       	<!-- 芝麻信用认证 -->
+        <item code="FrmSesameCredit" name="芝麻信用认证 " proccode="all.public" parent="FrmSesameCredit" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmSesameCredit" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台征信配置管理 -->
+        <item code="FrmCreditManageMent" name="后台征信配置管理 " proccode="all.public" parent="FrmCreditManageMent" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmCreditManageMent" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 查询后台征信和订单关联 -->
+        <item code="FrmClientAndOrder" name="查询后台征信和订单关联  " proccode="all.public" parent="FrmClientAndOrder" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmClientAndOrder" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台客户认证资料管理 -->
+        <item code="FrmClientList" name="后台客户认证资料 " proccode="all.public" parent="FrmClientList" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmClientList" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 查询后台活体映像列表  -->
+        <item code="FrmLivingBodyList" name="查询后台活体映像列表" proccode="all.public" parent="FrmLivingBodyList" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmLivingBodyList" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台征信管理 -->
+        <item code="FrmCreditManageMentView" name="后台征信管理 " proccode="all.public" parent="FrmCreditManageMentView" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmCreditManageMentView" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台芝麻信用认证历史 -->
+        <item code="FrmSesameLog" name="后台芝麻信用认证历史 " proccode="all.public" parent="FrmSesameLog" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmSesameLog" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 查看所有版本历史 -->
+        <item code="FrmVersionManagement" name="后台版本设置 " proccode="all.public" parent="FrmVersionManagement" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.common.forms.FrmVersionManagement" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台查询专属用户列表 -->
+        <item code="FrmAdminExclusiveUser" name="后台查询专属用户列表 " proccode="all.public" parent="FrmAdminExclusiveUser" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.userList.forms.FrmAdminExclusiveUser" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台绑定登录运维端 -->
+        <item code="FrmAdminUserList" name="后台查询专属用户列表 " proccode="all.public" parent="FrmAdminUserList" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.userList.forms.FrmAdminUserList" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台异常列表 -->
+        <item code="FrmYcOrder" name="后台异常列表 " proccode="all.public" parent="FrmYcOrder" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmYcOrder" />
+            <access verlist="0,1," />
+        </item>
+       	<!-- 后台操作异常上报单 -->
+        <item code="FrmOperateReported" name="后台操作异常上报单 " proccode="all.public" parent="FrmOperateReported" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.operate.forms.FrmOperateReported" />
+            <access verlist="0,1," />
+        </item>
+
+         	<!-- 个人专属信息 -->
+        <item code="FrmPersonalInfo" name="个人专属信息 " proccode="all.public" parent="FrmPersonalInfo" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.personalInfo.forms.FrmPersonalInfo" />
+	    <access verlist="0,1," />
+        </item>
+       	<!-- 查询单个用户芝麻信用记录 -->
+        <item code="FrmUserXinyong" name="查询单个用户芝麻信用记录 " proccode="all.public" parent="FrmUserXinyong" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.userList.forms.FrmUserXinyong" />
+        	<access verlist="0,1," />
+        </item>
+        <!-- 运费模板 -->
+        <item code="FrmOperateStandard" name="运费模板 " proccode="all.public" parent="FrmOperateStandard" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.operate.forms.FrmOperateStandard" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 查询平台所有资金账户 -->
+        <item code="FrmFundsAccount" name="查询平台所有资金账户" proccode="all.public" parent="FrmFundsAccount" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmFundsAccount" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 调账页面  -->
+        <item code="FrmAdjust" name="平台账户调账 " proccode="all.public" parent="FrmAdjust" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmAdjust" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 日账单 -->
+        <item code="FrmDayBill" name="日账单 " proccode="all.public" parent="FrmDayBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.troubleshooting.forms.FrmDayBill" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 周账单 -->
+        <item code="FrmWeekBill" name="周账单" proccode="all.public" parent="FrmWeekBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.troubleshooting.forms.FrmWeekBill" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 月账单  -->
+        <item code="FrmMonthBill" name="月账单 " proccode="all.public" parent="FrmMonthBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.troubleshooting.forms.FrmMonthBill" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 社区归属账单  -->
+        <item code="FrmCommunityDayBill" name="社区归属账单 " proccode="all.public" parent="FrmCommunityDayBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.troubleshooting.forms.FrmCommunityDayBill" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 机构归属账单  -->
+        <item code="FrmMechanismDayBill" name="机构归属账单 " proccode="all.public" parent="FrmMechanismDayBill" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.troubleshooting.forms.FrmMechanismDayBill" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 查看平台账户详情  -->
+        <item code="FrmFundsAccountDeil" name="查看平台账户详情 " proccode="all.public" parent="FrmFundsAccountDeil" hide="false" security="false">
+	        <web process="release" pageno="900" class="com.huagu.myWallet.forms.FrmFundsAccountDeil" />
+        	<access verlist="0,1," />
+        </item>
+        <!-- 购买订单  -->
+        <item code="FrmBuyOrders" name="购买订单" proccode="all.public" parent="FrmBuyOrders" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmBuyOrders" />
+            <access verlist="0,1," />
+        </item>
+		<!-- 赔付单全查列表展示  -->
+        <item code="FrmIndemnityQuery" name="赔付单全查列表展示 " proccode="all.public" parent="FrmIndemnityQuery" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.indemnity.forms.FrmIndemnityQuery" />
+            <access verlist="0,1," />
+        </item>
+		<!-- 退货单全查列表展示  -->
+        <item code="FrmReturnGoodsOrder" name="退货单全查列表展示 " proccode="all.public" parent="FrmReturnGoodsOrder" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmReturnGoodsOrder" />
+            <access verlist="0,1," />
+        </item>
+		<!-- 退货单全查列表展示  -->
+        <item code="FrmAdminQhOrder" name="取物单查询列表展示 " proccode="all.public" parent="FrmAdminQhOrder" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmAdminQhOrder" />
+            <access verlist="0,1," />
+        </item>
+		<!-- 查询后台单独配置征信列表  -->
+        <item code="FrmUserPersonalCredit" name="单独配置征信列表" proccode="all.public" parent="FrmAdminQhOrder" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.creditManagement.forms.FrmUserPersonalCredit" />
+			<access verlist="0,1," />
+        </item>
+        <!-- 捐赠单全查列表展示  -->
+        <item code="FrmDonationOrder" name="捐赠单全查列表展示 " proccode="all.public" parent="FrmDonationOrder" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmDonationOrder" />
+            <access verlist="0,1," />
+        </item>
+        <!--租赁柜归还订单 -->
+        <item code="FrmCabinetOrders" name="租赁柜归还订单 " proccode="all.public" parent="FrmCabinetOrders" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmCabinetOrders" />
+            <access verlist="0,1," />
+        </item>
+        <!--快递归还订单 -->
+        <item code="FrmExpressOrders" name="快递归还订单 " proccode="all.public" parent="FrmExpressOrders" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmExpressOrders" />
+            <access verlist="0,1," />
+        </item>
+          <!--按租赁订单查询关联单 -->
+        <item code="FrmLeaseOrders" name="按租赁订单查询关联单 " proccode="all.public" parent="FrmLeaseOrders" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmLeaseOrders" />
+            <access verlist="0,1," />
+        </item>
+           <!--按社区归属订单查询 -->
+        <item code="FrmCommunityOrders" name="按社区归属订单查询 " proccode="all.public" parent="FrmCommunityOrders" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmCommunityOrders" />
+            <access verlist="0,1," />
+        </item>
+          <!--按物品归属机构订单查询 -->
+        <item code="FrmHomeOrders" name="按物品归属机构订单查询 " proccode="all.public" parent="FrmHomeOrders" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.order.forms.FrmHomeOrders" />
+            <access verlist="0,1," />
+        </item>
+          <!-- 公益 -->
+        <item code="FrmGongYiCabinet" name="按物品归属机构订单查询 " proccode="all.public" parent="FrmGongYiCabinet" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.maintain.forms.FrmGongYiCabinet" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 待加入名单列表 -->
+        <item code="FrmWaitAddToBox" name="待加入名单列表 " proccode="all.public" parent="FrmWaitAddToBox" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.box.manage.forms.FrmWaitAddToBox" />
+            <access verlist="0,1," />
+        </item>
+          <!-- 银行卡认证 -->
+        <item code="FrmBankCard" name="银行卡认证 " proccode="all.public" parent="FrmBankCard" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.box.manage.forms.FrmBankCard" />
+            <access verlist="0,1," />
+        </item>
+        <!-- 绑定银行卡 -->
+        <item code="FrmAddBank" name="绑定银行卡" proccode="all.public" parent="FrmAddBank" hide="false" security="false">
+            <web process="release" pageno="900" class="com.huagu.addBank.forms.FrmAddBank" />
+            <access verlist="0,1," />
+        </item>
+	</body>
+</html>

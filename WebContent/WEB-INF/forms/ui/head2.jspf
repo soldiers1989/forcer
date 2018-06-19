@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script type="text/javascript">
+$(function(){
+	$("#header").find(".head-men").mouseenter(function(){
+		$(this).find(".hd-exit").fadeIn();
+	})
+	$("#header").find(".head-men").mouseleave(function(){
+		$(this).find(".hd-exit").fadeOut();
+	})
+})
+</script>
+<style>
+#menu-left .list {
+    padding-left: 0;
+    background-color: transparent;
+    display: block;
+}
+body{
+	min-width: 1360px; */
+    height: 100%;
+    font-family: Arial, "\5B8B\4F53";
+    max-width: 1920px;
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 20px;
+    margin: 0 auto;
+    overflow-y: hidden; 
+    overflow-x: auto;
+}
+</style>
+</head>
+<body>
+<!--头部-->
+    <div class="bartop min-bg" id="header">
+    	<div class="wrap">
+	    	<div class="head-box">
+		        <h1 class="title">一启享后台管理平台</h1>
+		        <div class="head-men">
+		            <a href="javascript:;"><i class="icon"><img src="${cdn }/admin/images/icon/icon_head.png" width="14" height="14"> </i></a>
+		            <a href="javascript:;" class="name">${jspPage.form.userCode }</a>|
+		            <a href="javascript:Loginexit();">退出</a>
+		            <div class="hd-exit" style="display: none">
+			        	<ul>
+			        		<li><a href="FrmEditPhonePaswd.editPwd">修改密码</a></li>
+			        		<!-- <li><a href="FrmEditPhonePaswd">修改手机号</a></li> -->
+			        	</ul>
+	       		 	</div>	
+		        </div>
+	        </div>
+        </div>
+    </div>
+<!--left-->
+    <!--头部点击按钮-->
+    <div class="content">
+    <div class="wrap">
+    <div class="menu-left fl" id="menu-left">
+        <div class="tc menu-top ptop_10">
+            <a href="javascript:;" id="left-btn" style="display: none"><img src="${cdn }/admin/images/icon/icon_meun_btn.png" width="21" height="16"> </a>
+        </div>
+        <!--下拉菜单-->
+        <div class="men-bx" id="men-bx">
+	        <c:forEach var="menuOne" items="${menus}"> 
+		        <c:if test="${menuOne.parent eq '-1'}">
+	        		<div class="menus">
+	                	<%-- <span class="item ${menuOne.image}" data-url="${menuOne.id}" onclick="into(this);"><a href="${menuOne.id }">${menuOne.caption}</a></span> --%>
+	                	<span class="item ${menuOne.image}" data-url="${menuOne.id}" onclick="into(this);">${menuOne.caption}</span>
+	                	<!-- 一级菜单 -->
+						<ul class="menu-next">
+							<%-- <c:set value="${menu.id}" var="parent" /> --%>
+							<c:forEach var="menuTwo" items="${menus}"> 
+								<c:if test="${menuTwo.parent eq menuOne.proccode}">
+				                	<!--  二级菜单 -->
+				                    <li class="list"><a href="${menuTwo.id}" class="two">${menuTwo.caption}</a></li>
+				           		</c:if>
+							</c:forEach>
+						</ul>
+		        	</div>
+		        </c:if>
+			</c:forEach>
+		</div>
+	</div>	
+

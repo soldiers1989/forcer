@@ -1,0 +1,1191 @@
+.main_content{
+    font-family: MicrosoftYaHei;
+    width: 100%;
+    height: 100%;
+    /*background-color: white;*/
+}
+.more img{
+    width: .34rem;
+}
+#mat1{
+    height: .769rem;
+}
+#mat2{
+    height: 1.538rem;
+}
+.text-danger{
+    color: #c90d00 !important;
+}
+.text-gold{
+    color: #a0791a !important;
+}
+
+/*我的主页*/
+.my_message{
+    width: 100%;
+    height: 3.072rem;
+    background-image: url("../img/my_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-top: -.03rem;
+    position: relative;
+}
+.mySet{
+    height: .765rem;
+    line-height: .765rem;
+}
+.mySet a img{
+    width: .34rem;
+    margin-right: .255rem;
+}
+.basic_message{
+    height: .956rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.my_img{
+    width: 20%;
+}
+.my_img a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.my_img img{
+    width: 0.956rem;
+    height: 0.956rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.my_nameAndPhone{
+    color: white;
+    width: 50%;
+    line-height: .51rem;
+}
+.my_name img{
+     width: 0.29rem;
+     height: 0.29rem;
+ }
+.my_sign{
+    width: 30%;
+    line-height: .956rem;
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #a0791a;
+}
+.my_sign a{
+    display: inline-block;
+    height: 0.495rem;
+    border-radius: .25rem 0 0 .25rem;
+    background: white;
+    line-height: .495rem;
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #a0791a;
+    padding: 0 .17rem;
+}
+.my_sign img{
+    width: 0.282rem;
+    height: 0.273rem;
+}
+.kinds_num{
+    width: 100%;
+    height: 0.751rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-top: .1rem;
+}
+.kinds_num>div{
+    width: 25%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.kinds_num>div a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: white;
+}
+.right_line{
+    display: inline-block;
+    float: left;
+    width: 1px;
+    height: 40%;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    background-color: #ffffff7a;
+}
+.myOrder_hint{
+    height: .85rem;
+    line-height: .85rem;
+    background-color: white;
+    padding-left: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.myOrder_hint a{
+    width: 100%;
+    height: 100%;
+    font-size: 0.273rem;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #333333;
+    line-height: .85rem;
+    padding-right: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.myOrder_hint a img{
+    width: .17rem;
+    height: .34rem;
+}
+.my_operation{
+    background-color: white;
+    height: 1.425rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.my_operation li{
+    width: 25%;
+    text-align: center;
+}
+.my_operation li a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    font-size: 0.205rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.512rem;
+    letter-spacing: 0rem;
+    color: #1a1a1a;
+}
+.my_operation li a img{
+    width: 0.435rem;
+    height: 0.401rem;
+}
+.my_service{
+    padding: .17rem 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    background-color: white;
+}
+.my_service li{
+    width: 25%;
+    text-align: center;
+}
+.my_service li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 0.205rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.512rem;
+    letter-spacing: 0rem;
+    color: #1a1a1a;
+}
+.my_service li a img{
+    width: 0.495rem;
+    height: 0.495rem;
+}
+.kefu{
+    width: 0.759rem;
+    height: 0.751rem;
+    position: fixed;
+    right: .255rem;
+    bottom: .255rem;
+}
+
+
+/*地址管理*/
+.address_listBox{
+    margin-top: .17rem;
+    /* padding: .17rem 0 .17rem .17rem;
+    background-color: white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box; */
+}
+.address_listBox:first-child{
+    margin-top: 0;
+}
+.my_address_list{
+    padding: .17rem 0 .17rem .17rem;
+    background-color: white;
+    line-height: .425rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.my_address_list li{
+    padding-right: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.address_operation{
+    padding: 0 .17rem;
+    background-color: white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    line-height: .68rem;
+}
+.address_operation img{
+    width: .307rem;
+    height: .307rem;
+}
+.address_operation .list_left{
+    position: relative;
+    padding-left: .5rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.address_operation .listImg{
+    display: none;
+}
+.address_operation .list_left img{
+    position: absolute;
+    left: 0;
+    top: .22rem;
+}
+.imgActive .address_operation .list_left .listImg{
+    display: block;
+}
+.imgActive .address_operation .list_left img{
+    display: none;
+}
+
+
+/* 我的地址新增 */
+.myAddress_list{
+    padding-left: .17rem;
+    background-color: white;
+}
+.myAddress_details{
+    width: 100%;
+    height: .85rem;
+    line-height: .85rem;
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #333333;
+    border-bottom: 1px solid #e6e6e6;
+    padding-right: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;}
+}
+.details_address{
+    width: 100%;
+    height: 1.45rem;
+    border: 0;
+    padding: .255rem;
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.425rem;
+    letter-spacing: 0rem;
+    color: #333333;
+    display: inline-block;
+}
+.myAddress_hint{
+    display: inline-block;
+    width: 25%;
+}
+.myAddress_details input{
+    border: 0;
+    height: 95%;
+    font-size: 0.239rem;
+    color: #333;
+}
+.address_save{
+    position: absolute;
+    right: .17rem;
+    height: .769rem;
+    top: 0;
+    background-color: transparent;
+    border: 0;
+    color: #4d4d4d;
+    z-index: 100;
+}
+.set_default{
+    height: .75rem;
+    line-height: .75rem;
+    padding: 0 .17rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.set_default input{
+    height: 100%;
+    color: #333333;
+    border: 0;
+    background-color: transparent;
+}
+.set_default>div img{
+    position: absolute;
+    right: 0.17rem;
+    width: 0.307rem;
+    height: 0.307rem;
+    top: .22rem;
+}
+.set_default .listImg{
+    display: none;
+}
+.set_default.imgActive>div .listImg{
+    display: block;
+}
+.set_default.imgActive>div img{
+    display: none;
+}
+
+/* 邀请好友 */
+#inviteFriend{
+    background-color: white;
+    text-align: center;
+}
+.inviteFriend_title{
+    font-size: 0.614rem;
+    margin-top: .68rem;
+    margin-bottom: .425rem;
+}
+.inviteFriend_title .gift{
+    font-size: 1.007rem;
+    transform: rotate(13deg);
+    display: inline-block;
+}
+.inviteFriend_hint{
+    padding: 0 .51rem;
+    line-height: .425rem;
+    text-align: left;
+}
+.inviteFriend_img{
+    height: 2.531rem;
+}
+.inviteFriend_img img{
+    height: 2.531rem;
+    width: 2.531rem;
+}
+
+/* 意见反馈 */
+.more_submit{
+    position: absolute;
+    right: .17rem;
+    top: 0.2rem;
+    z-index: 100;
+    background-color: transparent;
+    border: 0;
+}
+#view_{
+    height: 3.1rem;
+    background-color: #ffffff;
+    font-size: .255rem;
+    padding: .17rem 0.255rem;
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.words_num{
+    position: absolute;
+    right: .255rem;
+    top: 3.4rem;
+}
+.feedback_title{
+    font-size: .238rem;
+    color: #666;
+    height: .85rem;
+    line-height: 1.1rem;
+    padding-left: .17rem;
+}
+.feedback_list li{
+    line-height: .4rem;
+    background-color: white;
+    padding-left: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.feedback_list li a{
+    display: inline-block;
+    padding: .17rem .17rem .17rem 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.feedback_list li:last-child a{
+    border-bottom: 0;
+}
+
+/* 使用指南 */
+.concat_kefu{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: .85rem;
+    background-color: white;
+}
+
+/*优惠券*/
+.nav_title{
+    text-align: center;
+}
+.nav_title li{
+    width: 50%;
+    background-color: white;
+    height: .68rem;
+    line-height: .68rem;
+    font-size: .273rem;
+    color: #4d4d4d;
+}
+.nav_title li span{
+    display: inline-block;
+    height: 100%;
+}
+.nav_title .navActive{
+    color: #a0791a;
+}
+.nav_title .navActive span{
+    border-bottom: 1px solid #a0791a;
+}
+.no_use{
+     background-image: url("../img/discount_coupon.png");
+ }
+.old_use{
+     background-image: url("../img/discount_couponB.png");
+ }
+.discount_coupon_list{
+    padding: 0 .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    display: none;
+}
+.discount_coupon_list li{
+    line-height: .425rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 1.73rem;
+    padding: .255rem 0 0 .34rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.discount_content_left{
+    width: 60%;
+}
+.discount_content_right{
+    width: 40%;
+    text-align: center;
+    color: white;
+    padding-top: .17rem;
+}
+/* 我的捐赠 */
+.donate_list{
+    background-color: white;
+}
+.donate_list li{
+    width: 100%;
+    height: 100%;
+    padding: .17rem 0 0 .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.donate_list li a{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    padding-right: .17rem;
+    padding-bottom: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    
+}
+.donate_list li:last-child a{
+    border-bottom: 0;
+}
+.donate_content{
+    width: 80%;
+    line-height: .425rem;
+}
+.donate_more{
+    width: 20%;
+    text-align: right;
+    line-height: 1.1rem;
+}
+.donate_more img{
+    width: .17rem;
+    height: .34rem;
+}
+
+/* 公益捐赠 */
+#benefit_donate{
+    background-color: white;
+}
+.donate_hint{
+    padding: .255rem;
+    line-height: .4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #333333;
+}
+.donate_img{
+    width: 100%;
+    height: 2rem;
+}
+.donate_img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 个人中心充值 */
+#recharge{
+    padding: .17rem;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.recharge_title{
+    height: 1rem;
+    padding-top: .17rem;
+    padding-left: .34rem;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.recharge_content{
+    width: 100%;
+    background-color: white;
+    padding: .34rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.specific_money{
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 1px solid #e6e6e6
+}
+.money_symbol{
+    font-size: .5rem;
+    font-weight: 600;
+}
+#price{
+    width: 70%;
+    height: 80%;
+    border: 0;
+    background-color: transparent;
+    font-size: .4rem;
+}
+.Card-buttom{
+    height: .68rem;
+}
+.Card-buttom .button{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: #048b04;
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.main_content input:-webkit-autofil{
+    background-color: white !important;
+}
+/* 我的押金信息*/
+.my_cash_pledge{
+    height: 2.5rem;
+    width: 100%;
+    text-align: center;
+    background-image: url(../img/my_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    padding-top: .6rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.specific_cash{
+    font-size: 0.717rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #ffffff;
+}
+.cash_hint{
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.cash_pledge_list li{
+    width: 100%;
+    height: 100%;
+    padding-left: .17rem;
+    background-color: white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.cash_pledge_list li a{
+    width: 100%;
+    height: 100%;
+    padding: .17rem .17rem .17rem 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+}
+.cash_pledge_list li:last-child a{
+    border-bottom: 0;
+}
+.pledge_img{
+    width: 30%;
+    height: 1.3rem;
+}
+.pledge_img img{
+    width: 1.57rem;
+    height: 1.3rem;
+}
+.pledge_message{
+    width: 40%;
+    height: 100%;
+    padding-top: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.pledge_name{
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.512rem;
+    letter-spacing: 0rem;
+    color: #333333;
+}
+.pledge_time{
+    font-size: 0.188rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #4d4d4d;
+}
+.pledge_money{
+    width: 30%;
+    font-size: 0.307rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #a0791a;
+    text-align: right;
+    line-height: 100%;
+    line-height: 1.3rem;
+}
+
+/* 签到说明 */
+#signExplain{
+    background-color: white;
+    padding: .255rem;
+    background-color: white;
+    font-size: .238rem;
+    line-height: .4rem;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+/* 我的积分 */
+.mIntegral{
+    width: 100%;
+    height: 2.5rem;
+    background-image: url("../img/my_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.mIntegral>div{
+    width: 33.33%;
+}
+.myVip{
+    padding-left: .255rem;
+    line-height: 2.5rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.myVip img{
+    width: 1.408rem;
+    height: 1.2rem;
+}
+.mIntegral_num{
+    color: white;
+    padding-top: .51rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    text-align: center;
+}
+.specific_num{
+    font-size: 0.717rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.95rem;
+    letter-spacing: 0rem;
+    color: #ffffff;
+}
+.integral_exchange{
+    position: relative;
+}
+.integral_exchange div{
+    width: 1rem;
+    height: .495rem;
+    line-height: .495rem;
+    font-size: 0.239rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #a0791a;
+    background-color: white;
+    padding-left: .17rem;
+    border-radius: .34rem 0 0 .34rem;
+    position: absolute;
+    right: 0;
+    top: 40%;
+}
+.integral_hint{
+    height: .765rem;
+    line-height: .765rem;
+    padding-left: .17rem;
+    font-size: 0.256rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #808080;
+}
+.integral_list{
+    background-color: white;
+    width: 100%;
+}
+.integral_list li{
+    width: 100%;
+    height: 1.145rem;
+    padding-left: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.integral_list li a{
+    width: 100%;
+    height: 100%;
+    padding-right: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 0.273rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #333333;
+}
+.integral_list li:list-child a{
+    border-bottom: 0;
+}
+.integral_left{
+    width: 70%;
+    padding: .17rem 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.integral_right{
+    width: 30%;
+    text-align: right;
+    line-height: 1.145rem;
+    font-size: 0.307rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #a0791a;
+}
+
+/* 积分说明 */
+#integral_Explain{
+    background-color: white;
+    padding: .255rem;
+    background-color: white;
+    font-size: .238rem;
+    line-height: .4rem;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+/* 个人资料 */
+#personlData .flexLayout{
+    height: .85rem;
+    line-height: .85rem;
+    background-color: white;
+    padding: 0 .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+#personlData .personlData_img{
+    height: 1.3rem;
+    line-height: 1.3rem;
+}
+#personlData .list_right img{
+    width: 0.683rem;
+    height: 0.683rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+#personlData .list_right{
+    font-size: 0.256rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #4d4d4d;
+}
+
+/* 服务协议 */
+#serviec_protocol{
+    background-color: white;
+    padding: .255rem;
+    background-color: white;
+    font-size: .238rem;
+    line-height: .4rem;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+/* 每日签到 */
+.right_sign{
+    width: 1.519rem;
+    height: 1.519rem;
+    background-color: #ffffff;
+    display: inline-block;
+    line-height: 1.519rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-size: 0.512rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #a0791a;
+    text-align: center;
+}
+
+/* 钱包交易明细 */
+.dealDetails_list{
+    padding-left: .17rem;
+    background-color: white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.dealDetails_list li{
+    padding: .17rem .17rem .17rem 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: .425rem;
+}
+.dealDetails_list li:last-child{
+    border-bottom: 0;
+}
+
+/* 消息管理 */
+.message_list .message_logo{
+    width: 0.614rem;
+    height: 0.614rem;
+}
+
+/* 消息列表 */
+.myMessage_list li{
+    padding-left: .17rem;
+    background-color: white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.myMessage_list li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: .425rem;
+    border-bottom: 1px solid #e6e6e6;
+    padding-right: .17rem;
+    padding-bottom: .17rem;
+    padding-top: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.myMessage_list li:last-child a{
+    border-bottom: 1px solid #e6e6e6;
+}
+.myMessage_title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 消息详情*/
+#myMessage_details{
+    background-color: white;
+}
+.myMessage_details{
+    padding: .255rem;
+     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    font-size: .238rem;
+    color: #666;
+    line-height: .4rem;
+    background-color: white;
+}
+
+/* 我的分享 */
+.my_data{
+    width: 100%;
+    height: 2.5rem;
+    padding-top: .425rem;
+    text-align: center;
+    background-image: url("../img/my_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.my_data_img img{
+    width: 0.956rem;
+    height: 0.956rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.my_data_name{
+    font-size: 0.307rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.85rem;
+    letter-spacing: 0rem;
+    color: #ffffff;
+}
+.nav{
+    height: .68rem;
+    line-height: .68rem;
+    font-size: 0.273rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rem;
+    color: #4d4d4d;
+    background-color: white;
+}
+.nav li{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.nav .navActive{
+    color: #a0791a;
+    border-bottom: 1px solid #a0791a;
+}
+#invite_person .message_list .list_left img{
+    width: 0.614rem;
+    height: 0.614rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+#invite_person .message_list li{
+    height: .973rem;
+}
+#invite_person .list_left{
+    width: 65%
+}
+#invite_person .list_right {
+    width: 35%;
+    text-align: center;
+    padding-top: .17rem;
+}
+#invite_person .message_list .list_left{
+    line-height: .973rem;
+}
+#invite_person .list_right div {
+    height: 35%;
+    line-height: 0.34rem;
+}
+/* 我的分享-订单收益 */
+.share_integral_list{
+    background-color: white;
+    padding-left: .17rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+.share_integral_list li{
+    padding: .17rem .17rem .17rem 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+   
+}
+.share_integral_list li:last-child{
+     border-bottom: 0;
+}
+.share_integral_list li img{
+    width: 0.614rem;
+    height: 0.614rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: .17rem;
+}
+.share_integral_name{
+    height: .51rem;
+}
+.share_integral_goods{
+    line-height: .4rem;
+}
+
+/* 反馈-回答详情 */
+.feedback_listDetails,.feedback_answer{
+	background-color: white;
+	padding: .17rem .255rem;
+	line-height: .425rem;
+}
+
+
+
+

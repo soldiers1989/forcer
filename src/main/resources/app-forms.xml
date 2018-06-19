@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<!-- 测试欢迎类 -->
+	<bean id="Default" class="com.huagu.common.forms.Default">
+	</bean>
+	<!-- 用户登陆验证 -->
+	<bean id="Welcome" class="com.huagu.login.forms.FrmLogin">
+	</bean>
+	<!-- 用户登陆验证 -->
+	<bean id="FrmLogin" class="com.huagu.login.forms.FrmLogin">
+	</bean>
+	<!-- 微信登录验证 -->
+	<bean id="FrmWeixin" class="com.huagu.common.forms.FrmWeiXin" scope="prototype">
+	</bean>
+	<!-- 微信提现 -->
+	<bean id="FrmWeixinWithdraw" class="com.huagu.pay.forms.FrmWeixinWithdraw">
+	</bean>
+	<!-- 后台登录页 -->
+	<bean id="FrmAdminLogin" class="com.huagu.admin.forms.FrmAdminLogin" scope="prototype">
+	</bean>
+	<!-- 后台忘记密码 -->
+	<bean id="FrmForgetPassword" class="com.huagu.admin.forms.FrmForgetPassword" scope="prototype">
+	</bean>
+	<!-- 发送验证码服务 -->
+	<bean id="FrmSendValidateCode" class="com.huagu.login.forms.FrmSendValidateCode" scope="prototype">
+	</bean>
+	<!-- 后台首页 -->
+	<bean id="FrmAdminIndex" class="com.huagu.admin.forms.FrmAdminIndex" scope="prototype">
+	</bean>
+	<!-- 后台修改密码 -->
+	<bean id="FrmEditPhonePaswd" class="com.huagu.admin.forms.FrmEditPhonePaswd" scope="prototype">
+	</bean>
+	<!-- 首页轮播图广告管理 -->
+	<bean id="FrmAdminHomeAdManage" class="com.huagu.product.forms.FrmAdminHomeAdManage" scope="prototype">
+	</bean>
+	<!-- 商品名称管理 -->
+	<bean id="FrmAdminPro" class="com.huagu.product.forms.FrmAdminPro" scope="prototype">
+	</bean>
+	<!-- 后台角色管理 -->
+	<bean id="FrmRoleData" class="com.huagu.admin.forms.FrmRoleData" scope="prototype">
+	</bean>
+	<!-- 后台角色权限分配 -->
+	<bean id="FrmUserManagerData" class="com.huagu.admin.forms.FrmUserManagerData" scope="prototype">
+	</bean>
+	<!-- 租赁商品微信首页 -->
+	<bean id="FrmWeiPro" class="com.huagu.product.forms.FrmWeiPro" scope="prototype">
+	</bean>
+	<!-- 租赁商品详情微信 -->
+	<bean id="FrmRentWei" class="com.huagu.product.forms.FrmRentWei" scope="prototype">
+	</bean>
+	<!-- 评价管理 -->
+	<bean id="FrmEvaluate" class="com.huagu.product.forms.FrmEvaluate" scope="prototype">
+	</bean>
+	<!-- 售卖商品管理 -->
+	<bean id="FrmSale_proManage" class="com.huagu.product.forms.FrmSale_proManage" scope="prototype">
+	</bean>
+	<!-- 入库单查询列表 -->
+	<bean id="FrmSale_queryRK" class="com.huagu.product.forms.FrmSale_queryRK" scope="prototype">
+	</bean>
+	<!-- 租赁商品管理 -->
+	<bean id="FrmAdminRentPro" class="com.huagu.product.forms.FrmAdminRentPro" scope="prototype">
+	</bean>
+	<!-- 按照机柜查询物品存放状态 -->
+	<bean id="FrmQueryPro_ByCabinet" class="com.huagu.product.forms.FrmQueryPro_ByCabinet" scope="prototype">
+	</bean>
+	<!-- 按照物品电子条码查询 -->
+	<bean id="FrmNode_queryUpdate" class="com.huagu.product.forms.FrmNode_queryUpdate" scope="prototype">
+	</bean>
+	<!-- 供应商管理 -->
+	<bean id="FrmAdminSupply" class="com.huagu.product.forms.FrmAdminSupply" scope="prototype">
+	</bean>
+	<!-- 商品分类管理 -->
+	<bean id="FrmAdminProType" class="com.huagu.product.forms.FrmAdminProType" scope="prototype">
+	</bean>
+	<!-- 用户端租凭页面 -->
+	<bean id="FrmOrder_Lease" class="com.huagu.my.forms.FrmOrder_Lease" scope="prototype">
+	</bean>
+	<!-- 地图定位 -->
+	<bean id="FrmMap" class="com.huagu.map.forms.FrmMap" scope="prototype">
+	</bean>
+	<!-- 地图定位 -->
+	<bean id="FrmSys" class="com.huagu.map.forms.FrmWeiXinSaoYiSao" scope="prototype">
+	</bean>
+	<!-- 我的使用指南 -->
+	<bean id="FrmGuideList" class="com.huagu.my.forms.FrmGuideList" scope="prototype">
+	</bean>
+	<!-- 用户端订单页面 -->
+	<bean id="FrmOrder_My" class="com.huagu.my.forms.FrmOrder_My" scope="prototype">
+	</bean>
+	<!-- 地址管理-->
+	<bean id="FrmAdrmanage" class="com.huagu.my.forms.FrmAdrmanage" scope="prototype">
+	</bean>
+	<!-- 后台机柜管理 -->
+	<bean id="FrmMyBoxGroupManage" class="com.huagu.box.manage.forms.FrmMyBoxGroupManage" scope="prototype">
+	</bean>
+	<!-- 后台机柜管理详情查看 -->
+	<bean id="FrmMyBoxGroupLookDetail" class="com.huagu.box.manage.forms.FrmMyBoxGroupLookDetail" scope="prototype">
+	</bean>
+	<!-- 用户端机柜详情查看 -->
+	<bean id="FrmMyBoxGroup" class="com.huagu.box.front.forms.FrmMyBoxGroup" scope="prototype">
+	</bean>
+	<!-- 后台订单管理-->
+	<bean id="FrmDeliveryorder" class="com.huagu.order.forms.FrmDeliveryorder" scope="prototype">
+	</bean>
+
+	<!-- 更多-->
+	<bean id="FrmMore" class="com.huagu.more.forms.FrmMore" scope="prototype">
+	</bean>
+	<!-- 我的服务-->
+	<bean id="FrmMyServices" class="com.huagu.myService.forms.FrmMyServices" scope="prototype">
+	</bean>
+	<!-- 二维码生成工具类-->
+	<bean id="QrcodeUtil" class="com.huagu.common.tools.QrcodeUtil" scope="prototype">
+	</bean>
+	<!-- 意见反馈  -->
+	<bean id="FrmFeedback" class="com.huagu.my.forms.FrmFeedBack" scope="prototype">
+	</bean>
+	<!-- 文章协议  -->
+	<bean id="FrmRentPact" class="com.huagu.consultation.forms.FrmRentPact" scope="prototype">
+	</bean>
+	<!-- 资讯管理列表  -->
+	<bean id="FrmInformationList" class="com.huagu.consultation.forms.FrmInformationList" scope="prototype">
+	</bean>
+	<!-- 各种协议内容页面 -->
+	<bean id="FrmViewProtocol" class="com.huagu.consultation.forms.FrmViewProtocol" scope="prototype">
+	</bean>
+	<!-- 我的钱包 -->
+	<bean id="FrmMyWallet" class="com.huagu.myWallet.forms.FrmMyWallet" scope="prototype">
+	</bean>
+	<!-- 积分签到管理 -->
+	<bean id="FrmJifenSign" class="com.huagu.jiFenAndSign.forms.FrmJifenSign" scope="prototype">
+	</bean>
+	<!-- 捐赠 -->
+	<bean id="FrmDonation" class="com.huagu.donation.forms.FrmDonation" scope="prototype">
+	</bean>
+	<!-- 消息管理，消息列表 -->
+	<bean id="FrmNewslist" class="com.huagu.newslist.forms.FrmNewslist" scope="prototype">
+	</bean>
+	
+	<!-- 帮助中心 -->
+	<bean id="FrmHelpcenter" class="com.huagu.helpcenter.forms.FrmHelpcenter" scope="prototype">
+	</bean>
+	<!-- 后台租赁自取订单-->
+	<bean id="FrmPickUpOrder" class="com.huagu.order.forms.FrmPickUpOrder" scope="prototype">
+	</bean>
+	<!-- 后台送货上门订单-->
+	<bean id="FrmDeliveryGoHome" class="com.huagu.order.forms.FrmDeliveryGoHome" scope="prototype">
+	</bean>
+	<!-- 优惠券发放 -->
+	<bean id="FrmReleaseCoupon" class="com.huagu.coupon.forms.FrmReleaseCoupon" scope="prototype">
+	</bean>
+	<!-- 优惠券详情 -->
+	<bean id="FrmCouponDetails" class="com.huagu.coupon.forms.FrmCouponDetails" scope="prototype">
+	</bean>
+	<!-- 后台积分记录 -->
+	<bean id="FrmJiFenRecords" class="com.huagu.jiFenAndSign.forms.FrmJiFenRecords" scope="prototype">
+	</bean>
+	<!-- 后台积分类型 -->
+	<bean id="FrmJiFenType" class="com.huagu.jiFenAndSign.forms.FrmJiFenType" scope="prototype">
+	</bean>
+	<!-- 后台签到记录-->
+	<bean id="FrmSignRecords" class="com.huagu.jiFenAndSign.forms.FrmSignRecords" scope="prototype">
+	</bean>
+	<!-- 芝麻信用认证页面 -->
+	<bean id="FrmSesame" class="com.huagu.common.sesame.FrmSesame" scope="prototype">
+	</bean>
+	<!-- 我的柜组 -->
+	<bean id="FrmMyCabinet" class="com.huagu.maintain.forms.FrmMyCabinet" scope="prototype">
+	</bean>
+	<!-- 我的柜组 -->
+	<bean id="FrmAddCabinet" class="com.huagu.maintain.forms.FrmAddCabinet" scope="prototype">
+	</bean>
+	<!-- 商务合作 -->
+	<bean id="FrmBussiness" class="com.huagu.more.forms.FrmBussiness" scope="prototype">
+	</bean>	
+	<!-- 使用流程 -->
+	<bean id="FrmUseProcess" class="com.huagu.more.forms.FrmUseProcess" scope="prototype">
+	</bean>
+	<!-- 编辑器上传图片 -->
+	<bean id="FrmProductImage" class="com.huagu.common.forms.FrmProductImage" scope="prototype">
+	</bean>
+
+	<!-- 代理商列表-->
+	<bean id="FrmAgent" class="com.huagu.agentAndCom.forms.FrmAgent" scope="prototype">
+	</bean>
+	<!-- 微信公众号支付 -->
+	<bean id="FrmWeixinPay" class="com.huagu.pay.forms.FrmWeixinPay" scope="prototype">
+	</bean>
+	<!-- 微信公众号支付回调 -->
+	<bean id="FrmRechargeNotify" class="com.huagu.pay.forms.FrmRechargeNotify" scope="prototype">
+	</bean>
+
+	<!-- 社区列表 -->
+	<bean id="FrmCommunity" class="com.huagu.agentAndCom.forms.FrmCommunity" scope="prototype">
+	</bean>
+	<!-- 运维端运维-->
+	<bean id="FrmProDetails" class="com.huagu.operate.forms.FrmProDetails" scope="prototype">
+	</bean>
+
+	<!-- 区域管理-->
+	<bean id="FrmArea" class="com.huagu.agentAndCom.forms.FrmArea" scope="prototype">
+	</bean>
+	<!-- 订单与安卓对接 -->
+	<bean id="FrmOrderInterface" class="com.huagu.order.forms.FrmOrderInterface" scope="prototype">
+	</bean>
+	
+	<!-- 设置 -->
+    <bean id="FrmSetUp" class="com.huagu.setUp.forms.FrmSetUp" scope="prototype">
+    </bean>
+    <!-- 个人资料 -->
+    <bean id="FrmPersonalData" class="com.huagu.setUp.forms.FrmPersonalData" scope="prototype">
+    </bean>
+    <!-- 服务协议 -->
+    <bean id="FrmServiceAgreement" class="com.huagu.setUp.forms.FrmServiceAgreement" scope="prototype">
+    </bean>
+
+    <!-- 财务管理 -->
+    <bean id="FrmFinance" class="com.huagu.myWallet.forms.FrmFinance" scope="prototype">
+    </bean>
+    <!-- 日账单管理 -->
+    <bean id="FrmDayBill" class="com.huagu.troubleshooting.forms.FrmDayBill" scope="prototype">
+    </bean>
+    <!-- 周账单管理 -->
+    <bean id="FrmWeekBill" class="com.huagu.troubleshooting.forms.FrmWeekBill" scope="prototype">
+    </bean>
+    <!-- 月账单管理 -->
+    <bean id="FrmMonthBill" class="com.huagu.troubleshooting.forms.FrmMonthBill" scope="prototype">
+    </bean>
+    <!-- 社区账单管理 -->
+    <bean id="FrmCommunityDayBill" class="com.huagu.troubleshooting.forms.FrmCommunityDayBill" scope="prototype">
+    </bean>
+    <!-- 机构账单管理 -->
+    <bean id="FrmMechanismDayBill" class="com.huagu.troubleshooting.forms.FrmMechanismDayBill" scope="prototype">
+    </bean>
+    <!-- 优惠券是否使用 -->
+    <bean id="FrmCouponState" class="com.huagu.coupon.forms.FrmCouponState" scope="prototype">
+    </bean>
+    <!-- 公益捐赠 -->
+    <bean id="FrmDonationPicture" class="com.huagu.donation.forms.FrmDonationPicture" scope="prototype">
+    </bean>
+
+    <!-- 签到说明 -->
+    <bean id="FrmSign" class="com.huagu.more.forms.FrmSign" scope="prototype">
+    </bean>
+    <!--个人中心我的积分管理 -->
+    <bean id="FrmIntegral" class="com.huagu.more.forms.FrmIntegral" scope="prototype">
+    </bean>
+    <!-- 收藏 -->
+    <bean id="FrmCollect" class="com.huagu.my.forms.FrmCollect" scope="prototype">
+    </bean>
+    <!-- 运维端（我的中心） -->
+    <bean id="FrmMyCenter" class="com.huagu.my.forms.FrmMyCenter" scope="prototype">
+    </bean>
+    <!-- 运维端（设置界面跳转配置） -->
+    <bean id="FrmJumpPage" class="com.huagu.my.forms.FrmJumpPage" scope="prototype">
+    </bean>
+    <!-- 消息管理（运维端） -->
+    <bean id="FrmNewslistYunWei" class="com.huagu.newslist.forms.FrmNewslistYunWei" scope="prototype">
+    </bean>
+    <!-- 附近柜模糊查询 -->
+    <bean id="FrmMyBoxGroupfind" class="com.huagu.box.front.forms.FrmMyBoxGroupfind" scope="prototype">
+    </bean>
+    <!-- 后台寄送到柜 -->
+    <bean id="FrmDeliveryToBox" class="com.huagu.order.forms.FrmDeliveryToBox" scope="prototype">
+    </bean>
+    <!-- 消息分类 -->
+    <bean id="FrmMessageClass" class="com.huagu.newslist.forms.FrmMessageClass" scope="prototype">
+    </bean>
+    <!-- 导出excel -->
+    <bean id="FrmExcel" class="com.huagu.common.tools.FrmExcel" scope="prototype">
+    </bean>
+
+    <!-- 消息管理 -->
+    <bean id="FrmMessage" class="com.huagu.common.forms.FrmMessage" scope="prototype">
+	</bean>
+    <!-- 导出excel -->
+    <bean id="FrmControlImpl" class="com.huagu.control.forms.FrmControlImpl" scope="prototype">
+    </bean>
+    <!-- 查询系统消息（用户端） -->
+    <bean id="FrmMessageList" class="com.huagu.newslist.forms.FrmMessageList" scope="prototype">
+    </bean>
+    <!-- 社区服务（后台） -->
+    <bean id="FrmCommunityList" class="com.huagu.community.forms.FrmCommunityList" scope="prototype">
+    </bean>
+    <!-- 疑难解答（后台） -->
+    <bean id="FrmTroubleshooting" class="com.huagu.troubleshooting.forms.FrmTroubleshooting" scope="prototype">
+    </bean>
+    <!-- 物流管理 -->
+    <bean id="FrmLogistics" class="com.huagu.order.forms.FrmLogistics" scope="prototype">
+    </bean>
+    <!-- 用户管理（后台） -->
+    <bean id="FrmgetUser" class="com.huagu.userList.forms.FrmgetUser" scope="prototype">
+    </bean>
+     <!-- 用户管理（后台） -->
+    <bean id="FrmOperationLog" class="com.huagu.logs.forms.FrmOperationLog" scope="prototype">
+    </bean>
+     <!--箱柜区域管理 -->
+    <bean id="FrmBoxComm" class="com.huagu.agentAndCom.forms.FrmBoxComm" scope="prototype">
+    </bean>
+    <!--运维单-->
+    <bean id="FrmYunWeiBill" class="com.huagu.ywManage.forms.FrmYunWeiBill" scope="prototype">
+    </bean>
+     <!--调货单-->
+    <bean id="FrmDiaoHuoBill" class="com.huagu.ywManage.forms.FrmDiaoHuoBill" scope="prototype">
+    </bean>
+     <!--补货单-->
+    <bean id="FrmAddGoodsBill" class="com.huagu.ywManage.forms.FrmAddGoodsBill" scope="prototype">
+    </bean>
+     <!--折损管理-->
+    <bean id="FrmLossMgt" class="com.huagu.ywManage.forms.FrmLossMgt" scope="prototype">
+    </bean>
+    <!--前台运维管理-->
+    <bean id="FrmYwManage" class="com.huagu.ywManage.forms.FrmYwManage" scope="prototype">
+    </bean>
+    <!--前台运维管理-->
+    <bean id="FrmUserBalance" class="com.huagu.myWallet.forms.FrmUserBalance" scope="prototype">
+    </bean>
+    <!--前台运维管理-->
+    <bean id="FrmFinanceOverview" class="com.huagu.myWallet.forms.FrmFinanceOverview" scope="prototype">
+    </bean>
+    <!-- 修改智能柜展示轮播图片 -->
+    <bean id="FrmCabinetAdImg" class="com.huagu.maintain.forms.FrmCabinetAdImg" scope="prototype">
+    </bean>
+
+     <!--赔付单前台展示 -->
+    <bean id="FrmIndemnity" class="com.huagu.indemnity.forms.FrmIndemnity" scope="prototype">
+    </bean>
+     <!--赔付单后台台展示 -->
+    <bean id="FrmIndemnityInfo" class="com.huagu.indemnity.forms.FrmIndemnityInfo" scope="prototype">
+   </bean>
+    <!-- 芝麻信用分  -->
+    <bean id="FrmSesameCredit" class="com.huagu.creditManagement.forms.FrmSesameCredit" scope="prototype">
+    </bean>
+    <!-- 后台征信配置管理  -->
+    <bean id="FrmCreditManageMent" class="com.huagu.creditManagement.forms.FrmCreditManageMent" scope="prototype">
+    </bean>
+    <!-- 后台查询后台征信和订单关联   -->
+    <bean id="FrmClientAndOrder" class="com.huagu.creditManagement.forms.FrmClientAndOrder" scope="prototype">
+    </bean>
+    <!-- 后台征信管理  -->
+    <bean id="FrmCreditManageMentView" class="com.huagu.creditManagement.forms.FrmCreditManageMentView" scope="prototype">
+    </bean>
+    <!-- 后台客户认证资料  -->
+    <bean id="FrmClientList" class="com.huagu.creditManagement.forms.FrmClientList" scope="prototype">
+    </bean>
+    <!-- 查询后台活体映像列表  -->
+    <bean id="FrmLivingBodyList" class="com.huagu.creditManagement.forms.FrmLivingBodyList" scope="prototype">
+    </bean>
+    <!-- 后台芝麻信用认证日志  -->
+    <bean id="FrmSesameLog" class="com.huagu.creditManagement.forms.FrmSesameLog" scope="prototype">
+    </bean>
+    <!-- 查看所有版本历史  -->
+    <bean id="FrmVersionManagement" class="com.huagu.common.forms.FrmVersionManagement" scope="prototype">
+    </bean>
+    <!-- 专属用户信息列表  -->
+    <bean id="FrmAdminExclusiveUser" class="com.huagu.userList.forms.FrmAdminExclusiveUser" scope="prototype">
+    </bean>
+    <!-- 专属用户信息列表  -->
+    <bean id="FrmAdminUserList" class="com.huagu.userList.forms.FrmAdminUserList" scope="prototype">
+    </bean>
+    <!-- 后台异常单列表  -->
+    <bean id="FrmYcOrder" class="com.huagu.order.forms.FrmYcOrder" scope="prototype">
+    </bean>
+    <!-- 后台操作异常上报单  -->
+    <bean id="FrmOperateReported" class="com.huagu.operate.forms.FrmOperateReported" scope="prototype">
+    </bean>
+
+    <!-- 个人专属信息  -->
+    <bean id="FrmPersonalInfo" class="com.huagu.personalInfo.forms.FrmPersonalInfo" scope="prototype">
+	</bean>
+    <!-- 后台单个用户芝麻信用记录  -->
+    <bean id="FrmUserXinyong" class="com.huagu.userList.forms.FrmUserXinyong" scope="prototype">
+    </bean>
+    <!-- 运费模板-->
+    <bean id="FrmOperateStandard" class="com.huagu.operate.forms.FrmOperateStandard" scope="prototype">
+    </bean>
+    <!-- 查询平台所有资金账户-->
+    <bean id="FrmFundsAccount" class="com.huagu.myWallet.forms.FrmFundsAccount" scope="prototype">
+    </bean>
+    <!-- 调账页面 -->
+    <bean id="FrmAdjust" class="com.huagu.myWallet.forms.FrmAdjust" scope="prototype">
+    </bean>
+    <!-- 查看账户详情 -->
+    <bean id="FrmFundsAccountDeil" class="com.huagu.myWallet.forms.FrmFundsAccountDeil" scope="prototype">
+    </bean>
+    <!-- 购买订单-->
+    <bean id="FrmBuyOrders" class="com.huagu.order.forms.FrmBuyOrders" scope="prototype">
+    </bean>
+	<!-- 赔付单信息-->
+    <bean id="FrmIndemnityQuery" class="com.huagu.indemnity.forms.FrmIndemnityQuery" scope="prototype">
+    </bean>
+	<!-- 退货单查询列表展示-->
+    <bean id="FrmReturnGoodsOrder" class="com.huagu.order.forms.FrmReturnGoodsOrder" scope="prototype">
+    </bean> 
+    <!-- 后台捐赠单查询列表展示-->
+    <bean id="FrmDonationOrder" class="com.huagu.order.forms.FrmDonationOrder" scope="prototype">
+    </bean>
+    <!-- 租赁柜归还订单-->
+    <bean id="FrmCabinetOrders" class="com.huagu.order.forms.FrmCabinetOrders" scope="prototype">
+    </bean>
+    <!--快递归还订单-->
+    <bean id="FrmExpressOrders" class="com.huagu.order.forms.FrmExpressOrders" scope="prototype">
+    </bean>
+    <!--按租赁订单查询关联单-->
+    <bean id="FrmLeaseOrders" class="com.huagu.order.forms.FrmLeaseOrders" scope="prototype">
+    </bean>
+    <!--按社区归属订单查询-->
+    <bean id="FrmCommunityOrders" class="com.huagu.order.forms.FrmCommunityOrders" scope="prototype">
+    </bean>
+      <!--按物品归属机构订单查询-->
+    <bean id="FrmHomeOrders" class="com.huagu.order.forms.FrmHomeOrders" scope="prototype">
+	</bean>
+	<!-- 取物单查询列表展示-->
+    <bean id="FrmAdminQhOrder" class="com.huagu.order.forms.FrmAdminQhOrder" scope="prototype">
+    </bean>
+	<!-- 询后台单独配置征信列表 -->
+    <bean id="FrmUserPersonalCredit" class="com.huagu.creditManagement.forms.FrmUserPersonalCredit" scope="prototype">
+    </bean>
+    	<!-- 公益柜组 -->
+    <bean id="FrmGongYiCabinet" class="com.huagu.maintain.forms.FrmGongYiCabinet" scope="prototype">
+    </bean>
+    <!--待加入名单列表-->
+    <bean id="FrmWaitAddToBox" class="com.huagu.box.manage.forms.FrmWaitAddToBox" scope="prototype">
+    </bean>
+    <!--银行卡认证-->
+    <bean id="FrmBankCard" class="com.huagu.box.manage.forms.FrmBankCard" scope="prototype">
+    </bean>
+    <!--绑定银行卡银行卡-->
+    <bean id="FrmAddBank" class="com.huagu.addBank.forms.FrmAddBank" scope="prototype">
+    </bean>
+</beans>

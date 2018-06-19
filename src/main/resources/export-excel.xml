@@ -1,0 +1,1496 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+          http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 系统日志导出模板 -->
+    <bean id="LogTemplate" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="日志管理" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateDate_" />
+                    <property name="name" value="日期/时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateType_" />
+                    <property name="name" value="类型" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operate_" />
+                    <property name="name" value="操作行为" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateUser_" />
+                    <property name="name" value="操作人" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateAdress_" />
+                    <property name="name" value="操作IP" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateDetail_" />
+                    <property name="name" value="详情" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <!-- 电子标签导出模板 -->
+    <bean id="QueryNodeStateTemplate" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="电子标签" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="物品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proId_" />
+                    <property name="name" value="商品id" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="主电子条码" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ciCode_" />
+                    <property name="name" value="自动读取的配件电子条码" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="nodeState_" />
+                    <property name="name" value="商品状态" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createDate_" />
+                    <property name="name" value="添加时间" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <!-- 用户表导出模板 -->
+    <bean id="UserList" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="用户表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="index" />
+                    <property name="name" value="序号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="name_" />
+                    <property name="name" value="微信昵称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="mobile_"/>
+                    <property name="name" value="手机号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="renzhneg" />
+                    <property name="name" value="活体认证" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="bank" />
+                    <property name="name" value="银行卡认证" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zmrenzheng" />
+                    <property name="name" value="芝麻认证分" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="注册时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="overMoney_" />
+                    <property name="name" value="账户余额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="yajin" />
+                    <property name="name" value="押金" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="order" />
+                    <property name="name" value="在租订单数" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userJifen_" />
+                    <property name="name" value="积分" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="enabled_" />
+                    <property name="name" value="账户状态" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="yaoqingma" />
+                    <property name="name" value="邀请码" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="kefu" />
+                    <property name="name" value="专属客服" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="yaoqingNum" />
+                    <property name="name" value="邀请客户数" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="Do" />
+                    <property name="name" value="操作" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- 导出根据柜组查询物品存放情况 -->
+    <bean id="queryProByCabinet" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="存放物品表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="id_" />
+                    <property name="name" value="机柜编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="name_"/>
+                    <property name="name" value="机柜名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="communityName_" />
+                    <property name="name" value="柜组所在社区" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="boxId_" />
+                    <property name="name" value="箱子锁编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="箱内物品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="箱内物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="箱内物品主电子条码" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="补货时间" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- 导出根据电子条码查询的结果 -->
+    <bean id="nodeQueryUpdate" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="电子条码状态查询" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="fristName_" />
+                    <property name="name" value="一级分类" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="twoName_"/>
+                    <property name="name" value="二级分类" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="物品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="物品主电子条码" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="nodeState_" />
+                    <property name="name" value="物品当前状态" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="updateDate_" />
+                    <property name="name" value="单据发起人" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="updateDate_" />
+                    <property name="name" value="状态变更时间" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+      <!-- 导出售卖商品的入库单 -->
+    <bean id="queryRKList" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="售卖商品入库单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ruKuId_" />
+                    <property name="name" value="入库单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="fristName_"/>
+                    <property name="name" value="一级分类" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="twoName_" />
+                    <property name="name" value="二级分类" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="物品名称（+型号）" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleSupply_" />
+                    <property name="name" value="供应商" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleHomeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="jinPrice_" />
+                    <property name="name" value="进价单价" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ruKuCount_" />
+                    <property name="name" value="原始库存数" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="chCount_" />
+                    <property name="name" value="冲红数量" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumKuCun_" />
+                    <property name="name" value="冲红后物品库存总数" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleRuKuTime_" />
+                    <property name="name" value="入库时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="chTime_" />
+                    <property name="name" value="最后冲红时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleServerDeadTime_" />
+                    <property name="name" value="质保截止日期" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+          <!-- 导出物流管理 -->
+    <bean id="SvrLogisticsQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="物流管理" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="订单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proId_"/>
+                    <property name="name" value="商品ID" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="商品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userId_" />
+                    <property name="name" value="下单用户" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="shippingCosts_" />
+                    <property name="name" value="邮费" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="receiver_" />
+                    <property name="name" value="收件人" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recAdr_" />
+                    <property name="name" value="收件地址" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recPhone_" />
+                    <property name="name" value="收件人电话" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="deliveryTime_" />
+                    <property name="name" value="发货时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recTime_" />
+                    <property name="name" value="收货时间" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- 导出用户账户金额 -->
+    <bean id="SvrUserMoney" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="用户账户金额" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="name_" />
+                    <property name="name" value="用户名" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="overMoney_"/>
+                    <property name="name" value="账户余额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cashPledge_" />
+                    <property name="name" value="账户押金" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumRentMoney_" />
+                    <property name="name" value="账户锁定金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="shippingCosts_" />
+                    <property name="name" value="未结清赔付账户" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="amount_1" />
+                    <property name="name" value="账户历史充值" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="amount_2" />
+                    <property name="name" value="账户历史提现" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="dayRentMoney_" />
+                    <property name="name" value="账户租订单物品价值总金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="dayRentMoney_" />
+                    <property name="name" value="在租订单免押总额度" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出平台账户金额列表 -->
+    <bean id="SvrGetAccountRecordLog" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="平台账户金额列表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="number_" />
+                    <property name="name" value="流水序号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_"/>
+                    <property name="name" value="发生时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="amount_" />
+                    <property name="name" value="发生金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="type_" />
+                    <property name="name" value="交易类型" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="qamount_" />
+                    <property name="name" value="交易前金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="hamount_" />
+                    <property name="name" value="交易后金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recordId_" />
+                    <property name="name" value="对应流水" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="desc_" />
+                    <property name="name" value="交易备注" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+     <!-- 导出后台购买订单 -->
+    <bean id="SvrBuyOrdersQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="购买订单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="订单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recPhone_"/>
+                    <property name="name" value="下单用户手机号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="receiver_" />
+                    <property name="name" value="收货人姓名" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recAdr_" />
+                    <property name="name" value="收货地址" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="商品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleProColor_" />
+                    <property name="name" value="所选物品色号属性" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleHomeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="jinPrice_" />
+                    <property name="name" value="商品单价" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ruKuCount_" />
+                    <property name="name" value="商品数量" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="offerPrice_" />
+                    <property name="name" value="多个商品时优惠金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createDate_" />
+                    <property name="name" value="创建时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="支付成功时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="number_" />
+                    <property name="name" value="支付单号" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumRentMoney_" />
+                    <property name="name" value="总金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="coupon_" />
+                    <property name="name" value="优惠券抵扣" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumMoney_" />
+                    <property name="name" value="实付金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userNowMoney_" />
+                    <property name="name" value="订单支付成功后 账户余额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recLogisticsId_" />
+                    <property name="name" value="物流公司" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="logisticsState_" />
+                    <property name="name" value="物流状态" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="agree_" />
+                    <property name="name" value="是否同意退货" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="reGoodsId_" />
+                    <property name="name" value="退货关联单号" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderState_" />
+                    <property name="name" value="订单状态" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+     <!-- 退货单 -->
+    <bean id="SvrReturnGoodsOrder" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="退货单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="订单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="mobile_"/>
+                    <property name="name" value="退货申请人手机号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="reGoodsTime_" />
+                    <property name="name" value="退货申请时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="关联购买订单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="商品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="saleHomeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="agree_" />
+                    <property name="name" value="是否同意用户退货" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recLogisticsName_" />
+                    <property name="name" value="快递公司" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="recLogisticsId_" />
+                    <property name="name" value="快递单号" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="check_" />
+                    <property name="name" value="收货检查" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderState_" />
+                    <property name="name" value="退货状态" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="settle_" />
+                    <property name="name" value="退货处理" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="reGoodsMoney_" />
+                    <property name="name" value="退款金额" />
+       </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出日账单  -->
+    <bean id="SvrDayBill" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="日账单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="日期" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cMoney_"/>
+                    <property name="name" value="充值金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="tMoney_" />
+                    <property name="name" value="提现金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseTotalMoney_" />
+                    <property name="name" value="租赁订单今日结算租金总金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseKouchuMoney_" />
+                    <property name="name" value="租赁订单今日结算时扣除的租金金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="wxUserMoney_" />
+                    <property name="name" value="微信账户总金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userAvailableMoney_" />
+                    <property name="name" value="用户总可用金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userzAvailableMoney_" />
+                    <property name="name" value="用户正数可用余额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userfAvailableMoney_" />
+                    <property name="name" value="用户负可用余额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userPeifuMoney_" />
+                    <property name="name" value="今日产生赔付单金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userFuMoney_" />
+                    <property name="name" value="今日产生负数总金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userTianbuMoney_" />
+                    <property name="name" value="今日用户充值填补负数总金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseLishouMoney_" />
+                    <property name="name" value="今日新建产生租赁单立收租金金额" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+     <!-- 赔付单 -->
+    <bean id="SvrIndemnityList" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="赔付单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="mobile_" />
+                    <property name="name" value="用户手机号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payID_"/>
+                    <property name="name" value="赔付单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="关联租赁单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateId_" />
+                    <property name="name" value="关联运维单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="物品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="关联电子标签" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proCostPrice_" />
+                    <property name="name" value="物品价值" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumMoney_" />
+                    <property name="name" value="已收押金" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="reliefDeposit_" />
+                    <property name="name" value="免押金额度" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="suggestMoney_" />
+                    <property name="name" value="建议赔付金额" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="successMoney_" />
+                    <property name="name" value="达成赔付金额" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payReason_" />
+                    <property name="name" value="赔付原因" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="suggest_" />
+                    <property name="name" value="赔付后建议" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createDate_" />
+                    <property name="name" value="赔付单时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payStatus_" />
+                    <property name="name" value="状态" />
+           </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出周账单  -->
+    <bean id="SvrWeekBill" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="周账单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="日期" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cMoney_"/>
+                    <property name="name" value="充值金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="tMoney_" />
+                    <property name="name" value="提现金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseTotalMoney_" />
+                    <property name="name" value="租赁订单周结算租金总金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseKouchuMoney_" />
+                    <property name="name" value="租赁订单周结算时扣除的租金金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userPeifuMoney_" />
+                    <property name="name" value="本周产生赔付单金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userTianbuMoney_" />
+                    <property name="name" value="本周用户充值填补负数总金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseLishouMoney_" />
+                    <property name="name" value="本周新建产生租赁单立收租金金额" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+        <!-- 租赁柜归还 -->
+    <bean id="SvrCabinetOrdersQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="租赁柜归还订单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="租赁柜归还订单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="mobile_"/>
+                    <property name="name" value="归还人手机号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="setBoxId_" />
+                    <property name="name" value="归还箱号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createDate_" />
+                    <property name="name" value="归还订单成功创建时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="关联租赁订单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="商品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="租借时主电子条码" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ciCode_" />
+                    <property name="name" value="租借时次电子条码" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="归还时电子条码" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="无" />
+                    <property name="name" value="缺失条码" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="0" />
+                    <property name="name" value="判断物品未匹配全，开门次数" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="returnType_" />
+                    <property name="name" value="用户所报归还状态" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="无异常" />
+                    <property name="name" value="归还后运维检修是否报异常" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="OpenBoxTime_" />
+                    <property name="name" value="归还后运维检修时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateId_" />
+                    <property name="name" value="关联运维单" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="settleState_" />
+                    <property name="name" value="关联租赁订单结算状态" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+     <!-- 快递柜归还 -->
+    <bean id="SvrExpressOrdersQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="快递柜归还订单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="租赁柜归还订单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="mobile_"/>
+                    <property name="name" value="归还人手机号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="商品名称" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="logisticsState_" />
+                    <property name="name" value="归还物流状态" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="retuenLogisticsId_" />
+                    <property name="name" value="归还物流公司" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="returnLogisticsName_" />
+                    <property name="name" value="归还物流单号" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="returnOverTime_" />
+                    <property name="name" value="物流单号发出时间" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="无" />
+                    <property name="name" value="运维检修是否报异常" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="租借时主电子条码" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ciCode_" />
+                    <property name="name" value="租借时次电子条码" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="归还时电子条码" />
+                </bean>
+                     <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="无" />
+                    <property name="name" value="缺失条码" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateId_" />
+                    <property name="name" value="关联运维订单单号" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="关联租赁订单号" />
+                </bean>
+                  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="settleState_" />
+                    <property name="name" value="关联租赁订单结算状态" />
+     </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出月账单  -->
+    <bean id="SvrMonthBill" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="月账单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="日期" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cMoney_"/>
+                    <property name="name" value="充值金额(累计)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="tMoney_" />
+                    <property name="name" value="提现金额(累计)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseTotalMoney_" />
+                    <property name="name" value="租赁订单本月结算租金总金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseKouchuMoney_" />
+                    <property name="name" value="租赁订单本月结算时扣除的租金金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="wxUserMoneyc_" />
+                    <property name="name" value="微信账户总金额(期初)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="wxUserMoney_" />
+                    <property name="name" value="微信账户总金额(期末)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userAvailableMoneyc_" />
+                    <property name="name" value="用户总可用金额(期初)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userAvailableMoney_" />
+                    <property name="name" value="用户总可用金额(期末)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userzAvailableMoneyc_" />
+                    <property name="name" value="用户正数可用余额(期初)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userzAvailableMoney_" />
+                    <property name="name" value="用户正数可用余额(期末)" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userfAvailableMoneyc_" />
+                    <property name="name" value="用户负可用余额(期初)" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userfAvailableMoney_" />
+                    <property name="name" value="用户负可用余额(期末)" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userPeifuMoney_" />
+                    <property name="name" value="本月产生赔付单金额(累计)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userFuMoney_" />
+                    <property name="name" value="本月产生负数总金额(累计)" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userTianbuMoney_" />
+                    <property name="name" value="本月用户充值填补负数总金额(累计)" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseLishouMoney_" />
+                    <property name="name" value="本月新建产生租赁单立收租金金额(累计)" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+
+    	<!-- 社区归属订单  -->
+    <bean id="SvrCommOrdersQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="按社区归属订单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="communityName_" />
+                    <property name="name" value="社区简称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_"/>
+                    <property name="name" value="租赁订单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payTime_" />
+                    <property name="name" value="支付时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="物品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="物品主 条码" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="订单物品归属机构" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumOverMoney_" />
+                    <property name="name" value="应收超期租金" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumOverMoney_" />
+                    <property name="name" value="实收超期租金" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="pay_" />
+                    <property name="name" value="赔付差值" />
+                </bean>
+               <!--  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="租赁单是否取物" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="物品是否归还" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="物品是否赔付" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="物品是否报损" />
+                </bean> -->
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出机构  -->
+    <bean id="SvrGetMechBill" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="机构账单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="日期" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseTotalMoney_" />
+                    <property name="name" value="租赁订单结算租金总金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseKouchuMoney_" />
+                    <property name="name" value="租赁订单结算时扣除的租金金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userPeifuMoney_" />
+                    <property name="name" value="产生赔付单金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseLishouMoney_" />
+                    <property name="name" value="新建产生租赁单立收租金金额" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出社区  -->
+    <bean id="SvrGetCommBill" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="社区账单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="日期" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseTotalMoney_" />
+                    <property name="name" value="租赁订单结算租金总金额" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseKouchuMoney_" />
+                    <property name="name" value="租赁订单结算时扣除的租金金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="leaseLishouMoney_" />
+                    <property name="name" value="新建产生租赁单立收租金金额" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+
+    	<!-- 物品归属订单  -->
+    <bean id="SvrHomeOrdersQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="按物品归属订单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="homeAgency_" />
+                    <property name="name" value="物品归属机构简称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_"/>
+                    <property name="name" value="租赁订单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payTime_" />
+                    <property name="name" value="支付时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="proName_" />
+                    <property name="name" value="物品名称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="物品主 条码" />
+                </bean>
+               <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="communityName_" />
+                    <property name="name" value="订单产生社区简称" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumOverMoney_" />
+                    <property name="name" value="应收超期租金" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sumOverMoney_" />
+                    <property name="name" value="实收超期租金" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="pay_" />
+                    <property name="name" value="赔付差值" />
+                </bean>
+               <!--  <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="租赁单是否取物" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="物品是否归还" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="物品是否赔付" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="" />
+                    <property name="name" value="物品是否报损" />
+                </bean> -->
+            </list>
+        </property>
+    </bean>
+      	<!-- 按租赁订单查询关联单  -->
+    <bean id="SvrLeaseOrdersQuery" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="按租赁订单查询关联单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="租赁订单" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payTime_"/>
+                    <property name="name" value="支付时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="id_" />
+                    <property name="name" value="取物订单" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="qwdate_" />
+                    <property name="name" value="取物时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="returnId_" />
+                    <property name="name" value="归还订单" />
+                </bean>
+               <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="returnOverTime_" />
+                    <property name="name" value="归还时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="operateId_" />
+                    <property name="name" value="运维订单" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="OpenBoxTime_" />
+                    <property name="name" value="运维时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payID_" />
+                    <property name="name" value="赔付单" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="payDate_" />
+                    <property name="name" value="赔付时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ycNo_" />
+                    <property name="name" value="异常单号" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="ycTime_" />
+                    <property name="name" value="异常单创建时间" />
+	          </bean>
+            </list>
+        </property>
+    </bean>
+	<!-- 导出取物单信息  -->
+    <bean id="SvrGetQhOrder" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="租赁柜取物订单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="id_" />
+                    <property name="name" value="取物单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userCode_" />
+                    <property name="name" value="取物用户" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="关联订单ID号" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="goodName_" />
+                    <property name="name" value="商品名称" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="zhuCode_" />
+                    <property name="name" value="租赁时主电子条码" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="pzhuCode_" />
+                    <property name="name" value="配件主电子条码" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sqName_" />
+                    <property name="name" value="取物柜所在社区名称" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cabinetName_" />
+                    <property name="name" value="柜子箱号" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="boxNo_" />
+                    <property name="name" value="取物箱号" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="isClosed_" />
+                    <property name="name" value="是否关门" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出单独配置征信列表  -->
+    <bean id="SvrGetUserPersonalCredit" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="单独配置征信列表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userCode_" />
+                    <property name="name" value="征信对象" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="source_" />
+                    <property name="name" value="个人征信来源" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="yuanying_" />
+                    <property name="name" value="产生征信原因" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="node_" />
+                    <property name="name" value="产生征信节点" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="people_" />
+                    <property name="name" value="产生征信责任人" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="time_" />
+                    <property name="name" value="征信时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="type_" />
+                    <property name="name" value="征信方法" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="revision_" />
+                    <property name="name" value="征信调整数据" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="boxNo_" />
+                    <property name="name" value="征信关联单据详情" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="status_" />
+                    <property name="name" value="状态" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出客户认证资料列表  -->
+    <bean id="SvrGetClientLog" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="客户认证资料列表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userCode_" />
+                    <property name="name" value="用户手机号(主键)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="source_" />
+                    <property name="name" value="资料来源" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="attributes_" />
+                    <property name="name" value="用户属性" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="dataRen_" />
+                    <property name="name" value="资料责任人" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="status_" />
+                    <property name="name" value="状态" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出客户活体映像认证列表  -->
+    <bean id="SvrGetLivingBody" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="客户活体映像认证列表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="id_" />
+                    <property name="name" value="订单编号(主键)" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userCode_" />
+                    <property name="name" value="发起用户名" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createDate_" />
+                    <property name="name" value="订单时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="sxDate_" />
+                    <property name="name" value="失效时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cabAdr_" />
+                    <property name="name" value="柜子地址" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="cabNo_" />
+                    <property name="name" value="柜子编号" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="status_" />
+                    <property name="name" value="订单状态" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="imgUrl_" />
+                    <property name="name" value="订单映像图片" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出征信和订单关联列表  -->
+    <bean id="SvrGetClientAndOrder" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="征信和订单关联列表" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="id_" />
+                    <property name="name" value="租赁单编号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userCode_" />
+                    <property name="name" value="租赁单用户名" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createDate_" />
+                    <property name="name" value="订单时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="jigou_" />
+                    <property name="name" value="订单物品归属机构" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="channel_" />
+                    <property name="name" value="来自征信渠道" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="myMoney_" />
+                    <property name="name" value="订单生产时总免押额度" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="yuanYj_" />
+                    <property name="name" value="订单物品原押金" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="shiYj_" />
+                    <property name="name" value="订单实际收取押金" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="jianmianYj_" />
+                    <property name="name" value="享受免押金额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderStatus_" />
+                    <property name="name" value="订单归还是否报异常" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userJsMoney_" />
+                    <property name="name" value="订单结算后用户余额" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="userMoney_" />
+                    <property name="name" value="用户当前余额" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 导出捐赠单  -->
+    <bean id="SvrGetUserDonationOrder" class="cn.cerc.jexport.excel.Template" scope="prototype">
+        <property name="fileName" value="用户捐赠单" />
+        <property name="columns">
+            <list>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderId_" />
+                    <property name="name" value="订单单号" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createTime_" />
+                    <property name="name" value="订单创建时间" />
+                </bean>
+                <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="createUser_" />
+                    <property name="name" value="捐赠用户名" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="orderDesc_" />
+                    <property name="name" value="订单物品描述" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="count_" />
+                    <property name="name" value="数量" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="adr_" />
+                    <property name="name" value="捐赠柜地址" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="statusTime_" />
+                    <property name="name" value="捐赠状态变更时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="status_" />
+                    <property name="name" value="捐赠状态" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="jianmianYj_" />
+                    <property name="name" value="收货状态" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="maintainPhone_" />
+                    <property name="name" value="收货运维人员电话" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="shouhuoTime_" />
+                    <property name="name" value="收货时间" />
+                </bean>
+                 <bean class="cn.cerc.jexport.excel.StringColumn">
+                    <property name="code" value="status_" />
+                    <property name="name" value="捐赠状态" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>
+

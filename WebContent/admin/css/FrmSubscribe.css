@@ -1,0 +1,21 @@
+@charset "utf-8";
+.group-box{
+	margin-bottom: 20px;
+}
+.group-box#component2{
+	position: relative;
+	padding-left: 100px;
+	width: 400px;	
+}
+.group-box#component2 label{
+	width: 85px;
+}
+.group-box#component2 label:FIRST-CHILD {
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100px;
+}
+div#component3{
+	padding-left: 100px;
+}

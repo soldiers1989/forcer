@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="${cdn }/css/style.css">
+<link rel="stylesheet" href="${cdn }/files/common.css">
+<link rel="stylesheet" href="${cdn }/css/modal.css">
+<link rel="stylesheet" href="${cdn }/css/rent.css">
+<link rel="stylesheet" href="${cdn }/css/user.css">
+<link rel="stylesheet" href="${cdn }/css/online_store.css">
+<link rel="stylesheet" href="${cdn }/css/maintenance.css">
+<link rel="stylesheet" href="${cdn }/css/my.css">
+<link rel="stylesheet" href="${cdn }/files/swiper/swiper-3.3.1.min.css"/>
+<title>一启享</title>
+<script src="${cdn }/files/jquery-1.11.3.min.js"></script>
+<script src="${cdn }/files/swiper/swiper-3.3.1.min.js"></script>
+<script src="${cdn }/files/rem1.js"></script>
+<script src="${cdn }/js/modal.js"></script>
+<script src="${cdn }/js/common.js"></script>
+<script type="text/javascript">
+/* 解决移动端点击事件延迟300ms */
+$(function() {  
+    /* FastClick.attach(document.body);   */
+    $("header img.arrow-left").on("click", function() {
+    	ReturnBtnClick();
+	});
+});
+function ReturnBtnClick(){
+	/* alert("ReturnBtnClick"); */
+	var parentPage = '${jspPage.form.menu.params.parentId }';
+	/* alert("上一页:"+parentPage); */
+	window.location.href =(parentPage&&parentPage!="hidden")?parentPage:"javascript:back()";
+}
+function back(){
+	/* 支持部分页面返回键直接退出程序 */
+	var rbc = $(".rbc").attr("value");
+	if(rbc=='true'){
+		
+		$("#resAndSubButAlert").confirmAlert("提示","您确定要退出程序吗？",function(){
+			JSobj.finishWeb();
+		});
+	}
+	
+	//支持部分带.back的返回按钮
+	var backLink = $(".back").attr("href");
+	/* alert($("*").hasClass("back")); */
+	if($("*").hasClass("back") && (backLink=='javascript:void(0)' || backLink=='javascript:void(0);' || typeof(backLink)=='undefined')){
+		$(".back").click();
+		return;
+	}
+	//支持.prve的返回按钮
+	var prveLink = $(".prve").attr("href");
+	/* alert(prveLink); */
+	if(prveLink.length<10 || prveLink.substring(0,10)!='javascript'){
+		//支持直接href跳转
+		window.location.href = ''+prveLink;
+		return;
+	}
+	//支持go(-1)
+	if(prveLink=='javascript:history.go(-1);'||prveLink=='javascript:history.go(-1)'){
+		window.history.go(-1);
+		return;
+	}
+	//支持.prve 点击事件
+	if($("*").hasClass("prve") && (prveLink=='javascript:void(0)' || prveLink=='javascript:void(0);' || typeof(prveLink)=='undefined')){
+		$(".prve").click();
+		return;
+	}
+}
+function exit(){
+	MobclickAgent.profileSignOff();//统计用户退出
+	window.location.href="Login.exit";
+}
+</script>

@@ -1,0 +1,61 @@
+
+/*
+登录*/
+.login-box{
+    background: #fff;
+    padding: 40px;
+    margin-top: 100px;
+    margin-right: 200px;
+    width: 285px;
+    box-shadow: 0px 0px 28px #ccc;
+    -webkit-box-shadow: 0px 0px 28px #ccc;
+    -moz-box-shadow: 0px 0px 28px #ccc;
+    -ms-box-shadow: 0px 0px 28px #ccc;
+    -o-box-shadow: 0px 0px 28px #ccc;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.init-box{
+    height: 30px;
+    line-height: 30px;
+    color: #666 ;
+}
+.text-bx{
+    width: 235px;
+    height: 30px;
+    margin-left: 5px;
+    line-height: 30px;
+    color: #666 ;
+    text-indent: 10px;
+    border: 1px solid #e6e6e6;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    outline: none;
+}
+.btn{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+    font-family: '\5B8B\4F53';
+    vertical-align: middle;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    padding: 10px 25px;
+    background: #48b2bd;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}

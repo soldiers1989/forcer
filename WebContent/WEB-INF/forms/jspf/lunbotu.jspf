@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<style>
+.swiper-container .img{
+    height: 2.376rem;
+    width:100%;
+}		
+</style>
+
+<div class="swiper-container bar_img">
+	<div class="swiper-wrapper">
+		<c:forEach var="lunbo" items="${lunbo}">
+			<div class="swiper-slide">
+				<a href="#" onclick="go('${lunbo.items.linkAdd_}')"><img class="img" src="${lunbo.items.imageURL_}" /></a>
+			</div>
+		</c:forEach>
+	</div>
+<div class="swiper-pagination bar_img"></div>

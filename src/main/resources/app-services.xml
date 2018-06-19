@@ -1,0 +1,1558 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<import resource="classpath*:jbean-service.xml" />
+	<import resource="jmis-services.xml" />
+	<!-- 登录，得到用户信息 -->
+	<bean id="SvrGetUserInfoByUserPhone" class="com.huagu.login.services.SvrGetUserInfoByUserPhone" scope="prototype">
+	</bean>
+    <!-- 登录，得到用户信息 -->
+    <bean id="SvrGetUserMobileByUserCode" class="com.huagu.common.services.message.SvrGetUserMobileByUserCode" scope="prototype">
+    </bean>
+	<!-- 用户登录查询 -->
+	<bean id="SvrDataPointLogin" class="com.huagu.other.services.SvrDataPointLogin"
+		scope="prototype">
+	</bean>
+	<!-- 登录查询 -->
+	<bean id="SvrFindAdminLogin" class="com.huagu.other.services.SvrFindAdminLogin"
+		scope="prototype">
+	</bean>
+	<!-- 登录统计 -->
+	<bean id="SvrReportUserAdd" class="com.huagu.login.services.SvrReportUserAdd"
+		scope="prototype">
+	</bean>
+	<!-- 后台权限查询 -->
+	<bean id="SvrRoleDataQuery" class="com.huagu.admin.services.SvrRoleDataQuery"
+		scope="prototype">
+	</bean>
+	<!-- 后台角色权限修改 -->
+	<bean id="SvrUserManagerDataModify" class="com.huagu.admin.services.SvrUserManagerDataModify"
+		scope="prototype">
+	</bean>
+	<!-- 后台角色权限查询 -->
+	<bean id="SvrUserManagerDataQuery" class="com.huagu.admin.services.SvrUserManagerDataQuery"
+		scope="prototype">
+	</bean>
+	<!-- 后台角色权限删除 -->
+	<bean id="SvrUserManagerDataDel" class="com.huagu.admin.services.SvrUserManagerDataDel"
+		scope="prototype">
+	</bean>
+	<!-- 后台权限统计 -->
+	<bean id="SvrRoleDataCount" class="com.huagu.admin.services.SvrRoleDataCount"
+		scope="prototype">
+	</bean>
+	<!-- 后台角色修改 -->
+	<bean id="SvrRoleDataModify" class="com.huagu.admin.services.SvrRoleDataModify"
+		scope="prototype">
+	</bean>
+	<!-- 后台角色权限查询 -->
+	<bean id="SvrPowerQuery" class="com.huagu.admin.services.SvrPowerQuery"
+		scope="prototype">
+	</bean>
+	<!-- 查询用户权限 -->
+	<bean id="SvrRoleAddPower" class="com.huagu.admin.services.SvrRoleAddPower"
+		scope="prototype">
+	</bean>
+	<!-- 删除角色 -->
+	<bean id="SvrRoleDel" class="com.huagu.admin.services.SvrRoleDel"
+		scope="prototype">
+	</bean>
+	<!-- 删除用户权限 -->
+	<bean id="SvrRoleAddPowerDel" class="com.huagu.admin.services.SvrRoleAddPowerDel"
+		scope="prototype">
+	</bean>
+	<!-- 检验角色是否存在 -->
+	<bean id="SvrCheckRoleName" class="com.huagu.admin.services.SvrCheckRoleName"
+		scope="prototype">
+	</bean>
+	<!-- 检验角色是否存在 -->
+	<bean id="SvrManageLog" class="com.huagu.admin.services.SvrManageLog"
+		scope="prototype">
+	</bean>
+	<!-- 后台修改登录密码 -->
+	<bean id="SvrEditPassWord" class="com.huagu.admin.services.SvrEditPassWord"
+		scope="prototype">
+	</bean>
+	<!-- 找回密码 -->
+	<bean id="SvrLossPassword" class="com.huagu.other.services.SvrLossPassword"
+		scope="prototype">
+	</bean>
+	<!-- 查询菜单 -->
+	<bean id="SvrMenuQuery" class="com.huagu.admin.services.SvrMenuQuery"
+		scope="prototype">
+	</bean>
+	<!-- 查看最后一次入库单号-->
+	<bean id="SvrGetLastRuKuId" class="com.huagu.product.services.SvrGetLastRuKuId"
+		scope="prototype">
+	</bean>
+	<!-- 发送验证码 -->
+	<bean id="SendValidateCodeService" class="com.huagu.login.services.SvrSendValidateCode"
+		scope="prototype">
+	</bean>
+    <!-- 发送异常短信 -->
+    <bean id="SvrSendAbnormalSMS" class="com.huagu.login.services.SvrSendAbnormalSMS"
+        scope="prototype">
+    </bean>
+	<!-- 添加首页轮播图-->
+	<bean id="SvrHomeAd.insertHomeAd" class="com.huagu.product.services.SvrHomeAd"
+		scope="prototype">
+		<property name="funcCode" value="insertHomeAd"></property>
+	</bean>
+	<!-- 删除首页轮播图-->
+	<bean id="SvrHomeAd.delHomeAd" class="com.huagu.product.services.SvrHomeAd"
+		scope="prototype">
+		<property name="funcCode" value="delHomeAd"></property>
+	</bean>
+	<!-- 修改轮播图链接-->
+	<bean id="SvrHomeAd.upLunBoAd" class="com.huagu.product.services.SvrHomeAd"
+		scope="prototype">
+		<property name="funcCode" value="upLunBoAd"></property>
+	</bean>
+	<!-- 查询轮播图链接-->
+	<bean id="SvrHomeAd.selectLunBo" class="com.huagu.product.services.SvrHomeAd"
+		scope="prototype">
+		<property name="funcCode" value="selectLunBo"></property>
+	</bean>
+	<!-- 查询首页轮播图-->
+	<bean id="SvrHomeAd.queryHomeAd" class="com.huagu.product.services.SvrHomeAd"
+		scope="prototype">
+		<property name="funcCode" value="queryHomeAd"></property>
+	</bean>
+	<!-- 评价管理-->
+	<bean id="SvrEvaluate.queryUserEvaluate" class="com.huagu.product.services.SvrEvaluate"
+		scope="prototype">
+		<property name="funcCode" value="queryUserEvaluate"></property>
+	</bean>
+	<!-- 管理员查看评价回复-->
+	<bean id="SvrEvaluate.toQueryEvaluateById" class="com.huagu.product.services.SvrEvaluate"
+		scope="prototype">
+		<property name="funcCode" value="toQueryEvaluateById"></property>
+	</bean>
+	<!-- 管理员回复评价-->
+	<bean id="SvrEvaluate.replyEvaluateById" class="com.huagu.product.services.SvrEvaluate"
+		scope="prototype">
+		<property name="funcCode" value="replyEvaluateById"></property>
+	</bean>
+	<!-- 微信端查看用户对商品的评价-->
+	<bean id="SvrWeiPro.queryEvaluateDetail" class="com.huagu.product.services.SvrWeiPro"
+		scope="prototype">
+		<property name="funcCode" value="queryEvaluateDetail"></property>
+	</bean>
+	<!-- 查询入库单列表-->
+	<bean id="SvrSaleProManage.queryRKList" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="queryRKList"></property>
+	</bean>
+	<!-- 后台售卖商品列表-->
+	<bean id="SvrSaleProManage.querySaleProList" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="querySaleProList"></property>
+	</bean>
+	<!-- 查询物品属性上面的售卖和租赁的情况-->
+	<bean id="SvrSaleProManage.queryProDetail" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="queryProDetail"></property>
+	</bean>
+	<!-- 后台售卖商品入库查询-->
+	<bean id="SvrSaleProManage.queryRuKuById" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="queryRuKuById"></property>
+	</bean>
+	<!-- 商品入库冲红查询-->
+	<bean id="SvrSaleProManage.queryRuKuByRKId" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="queryRuKuByRKId"></property>
+	</bean>
+	<!-- 售卖商品的冲红插入-->
+	<bean id="SvrSaleProManage.toCHong" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="toCHong"></property>
+	</bean>
+	<!-- 后台售卖商品添加物品属性-->
+	<bean id="SvrSaleProManage.insertSaleProAttr" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="insertSaleProAttr"></property>
+	</bean>
+	<!-- 后台售卖商品入库-->
+	<bean id="SvrSaleProManage.saleProRuKu" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="saleProRuKu"></property>
+	</bean>
+	<!-- 查询单个售卖物品的属性-->
+	<bean id="SvrSaleProManage.queryById" class="com.huagu.product.services.SvrSaleProManage"
+		scope="prototype">
+		<property name="funcCode" value="queryById"></property>
+	</bean>
+	<!-- 微信端查看商品图片-->
+	<bean id="SvrAdminRentPro.queryImg" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryImg"></property>
+	</bean>
+	<!-- 微信端查看商品图片-->
+	<bean id="SvrWeiPro.queryImg" class="com.huagu.product.services.SvrWeiPro"
+		scope="prototype">
+		<property name="funcCode" value="queryImg"></property>
+	</bean>
+	<!-- 微信端查看商品售卖的商品颜色-->
+	<bean id="SvrWeiPro.queryColor" class="com.huagu.product.services.SvrWeiPro"
+		scope="prototype">
+		<property name="funcCode" value="queryColor"></property>
+	</bean>
+	<!-- 微信端查看租赁商品详情-->
+	<bean id="SvrWeiPro.queryProDetail" class="com.huagu.product.services.SvrWeiPro"
+		scope="prototype">
+		<property name="funcCode" value="queryProDetail"></property>
+	</bean>
+	<!-- 微信端查看售卖商品详情-->
+	<bean id="SvrWeiPro.querySaleProDetail" class="com.huagu.product.services.SvrWeiPro"
+		scope="prototype">
+		<property name="funcCode" value="querySaleProDetail"></property>
+	</bean>
+	<!-- 查询二级分类的商品详情-->
+	<bean id="SvrRentWei.queryByFristNameId" class="com.huagu.product.services.SvrRentWei"
+		scope="prototype">
+		<property name="funcCode" value="queryByFristNameId"></property>
+	</bean>
+	<!-- 数码科技的租赁热推-->
+	<bean id="SvrRentWei.queryDigital" class="com.huagu.product.services.SvrRentWei"
+		scope="prototype">
+		<property name="funcCode" value="queryDigital"></property>
+	</bean>
+	<!-- 奢侈酷玩的租赁热推-->
+	<bean id="SvrRentWei.queryCool" class="com.huagu.product.services.SvrRentWei"
+		scope="prototype">
+		<property name="funcCode" value="queryCool"></property>
+	</bean>
+	<!-- 添加商品名称 -->
+	<bean id="SvrAdminPro.insertProductsName" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="insertProductsName"></property>
+	</bean>
+	<!--查询商品名称 -->
+	<bean id="SvrAdminPro.queryProName" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="queryProName"></property>
+	</bean>
+	<!--查询单个商品名称 -->
+	<bean id="SvrAdminPro.queryById" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="queryById"></property>
+	</bean>
+	<!--修改商品名称 -->
+	<bean id="SvrAdminPro.updateProName" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="updateProName"></property>
+	</bean>
+	<!--查询商品详情图片 -->
+	<bean id="SvrAdminPro.queryImg" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryImg"></property>
+	</bean>
+	<!--按照机柜查询物品状态 -->
+	<bean id="SvrQueryPro_ByCabinet.queryProByCabinet" class="com.huagu.product.services.SvrQueryPro_ByCabinet"
+		scope="prototype">
+		<property name="funcCode" value="queryProByCabinet"></property>
+	</bean>
+	<!--物品电子条码状态查询与变更 -->
+	<bean id="SvrQueryPro_ByCabinet.nodeQueryUpdate" class="com.huagu.product.services.SvrQueryPro_ByCabinet"
+		scope="prototype">
+		<property name="funcCode" value="nodeQueryUpdate"></property>
+	</bean>
+	<!--物品电子条码状态查询与变更为在库 -->
+	<bean id="SvrQueryPro_ByCabinet.updateZaiKu" class="com.huagu.product.services.SvrQueryPro_ByCabinet"
+		scope="prototype">
+		<property name="funcCode" value="updateZaiKu"></property>
+	</bean>	
+	<!--删除商品名称 -->
+	<bean id="SvrAdminPro.delProName" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="delProName"></property>
+	</bean>
+	<!--删除商品详情图片 -->
+	<bean id="SvrAdminPro.delImg" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="delImg"></property>
+	</bean>
+	<!--查询电子条码状态 -->
+	<bean id="SvrAdminRentPro.queryNodeState" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryNodeState"></property>
+	</bean>
+	<!--查询导入的电子条码的信息 -->
+	<bean id="SvrAdminRentPro.queryImportData" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryImportData"></property>
+	</bean>
+	<!--添加电子条码 -->
+	<bean id="SvrAdminRentPro.insertNode" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="insertNode"></property>
+	</bean>
+	<!--导入）电子条码 -->
+	<bean id="SvrAdminRentPro.importInsertNode" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="importInsertNode"></property>
+	</bean>
+	<!--查询租赁物品列表 -->
+	<bean id="SvrAdminRentPro.queryRentProList" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryRentProList"></property>
+	</bean>
+	<!--查询租赁商品的电子条码列表-->
+	<bean id="SvrAdminRentPro.queryNodeList" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryNodeList"></property>
+	</bean>
+	<!--删除电子条码信息-->
+	<bean id="SvrAdminRentPro.delProNode" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="delProNode"></property>
+	</bean>
+	<!--查询租赁单个商品的物品属性-->
+	<bean id="SvrAdminRentPro.queryById" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="queryById"></property>
+	</bean>
+	<!--添加租赁单个商品的物品属性-->
+	<bean id="SvrAdminRentPro.insertProAttr" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="insertProAttr"></property>
+	</bean>
+	<!--租赁单个商品上传图片-->
+	<bean id="SvrAdminRentPro.ajaxData" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="ajaxData"></property>
+	</bean>
+	<!--添加租赁单个商品的电子标签-->
+	<bean id="SvrAdminRentPro.insertProNode" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="insertProNode"></property>
+	</bean>
+	<!--修改租赁单个商品的电子标签-->
+	<bean id="SvrAdminRentPro.updateProNode" class="com.huagu.product.services.SvrAdminRentPro"
+		scope="prototype">
+		<property name="funcCode" value="updateProNode"></property>
+	</bean>
+	<!-- 添加分类 -->
+	<bean id="SvrProType.insertProType" class="com.huagu.product.services.SvrProType"
+		scope="prototype">
+		<property name="funcCode" value="insertProType"></property>
+	</bean>
+	<!-- 查询分类s -->
+	<bean id="SvrProType.queryProTypes" class="com.huagu.product.services.SvrProType"
+		scope="prototype">
+		<property name="funcCode" value="queryProTypes"></property>
+	</bean>
+	<!-- 查询分类 -->
+	<bean id="SvrProType.queryType" class="com.huagu.product.services.SvrProType"
+		scope="prototype">
+		<property name="funcCode" value="queryType"></property>
+	</bean>
+	<!-- 查询分类单个 -->
+	<bean id="SvrProType.queryById" class="com.huagu.product.services.SvrProType"
+		scope="prototype">
+		<property name="funcCode" value="queryById"></property>
+	</bean>
+	<!-- 修改分类 -->
+	<bean id="SvrProType.updateType" class="com.huagu.product.services.SvrProType"
+		scope="prototype">
+		<property name="funcCode" value="updateType"></property>
+	</bean>
+	<!--删除分类 -->
+	<bean id="SvrProType.delType" class="com.huagu.product.services.SvrProType"
+		scope="prototype">
+		<property name="funcCode" value="delType"></property>
+	</bean>
+	<!--添加供应商信息 -->
+	<bean id="SvrAdminSupply.insertSupply" class="com.huagu.product.services.SvrAdminSupply"
+		scope="prototype">
+		<property name="funcCode" value="insertSupply"></property>
+	</bean>
+	<!--查询供应商信息列表 -->
+	<bean id="SvrAdminSupply.queryListSupply" class="com.huagu.product.services.SvrAdminSupply"
+		scope="prototype">
+		<property name="funcCode" value="queryListSupply"></property>
+	</bean>
+	<!--修改供应商信息 -->
+	<bean id="SvrAdminSupply.updateSupply" class="com.huagu.product.services.SvrAdminSupply"
+		scope="prototype">
+		<property name="funcCode" value="updateSupply"></property>
+	</bean>
+	<!--删除供应商信息 -->
+	<bean id="SvrAdminSupply.delSupply" class="com.huagu.product.services.SvrAdminSupply"
+		scope="prototype">
+		<property name="funcCode" value="delSupply"></property>
+	</bean>
+	<!--供应商信息 -->
+	<bean id="SvrAdminSupply.queryById" class="com.huagu.product.services.SvrAdminSupply"
+		scope="prototype">
+		<property name="funcCode" value="queryById"></property>
+	</bean>
+	<!-- 添加租凭订单信息 -->
+	<bean id="SvrOrder_Lease.addOrderr_Lease" class="com.huagu.my.service.SvrOrder_Lease"
+		scope="prototype">
+		<property name="funcCode" value="addOrderr_Lease"></property>
+	</bean>
+	<bean id="SvrOrder_Lease.findUser" class="com.huagu.my.service.SvrOrder_Lease"
+		scope="prototype">
+		<property name="funcCode" value="findUser"></property>
+	</bean>
+	<!-- 指南标题查询 -->
+	<bean id="SvrGuideOrder.querytitle" class="com.huagu.my.service.SvrGuideOrder"
+		scope="prototype">
+		<property name="funcCode" value="querytitle" />
+	</bean>
+	<!-- 指南标题内容查询 -->
+	<bean id="SvrGuideOrder.querycontent" class="com.huagu.my.service.SvrGuideOrder"
+		scope="prototype">
+		<property name="funcCode" value="querycontent" />
+	</bean>
+	<!-- 指南标题添加 -->
+	<bean id="SvrGuideOrder.addtitle" class="com.huagu.my.service.SvrGuideOrder"
+		scope="prototype">
+		<property name="funcCode" value="addtitle" />
+	</bean>
+	<!-- 指南删除-->
+	<bean id="SvrGuideOrder.deletetitle" class="com.huagu.my.service.SvrGuideOrder"
+		scope="prototype">
+		<property name="funcCode" value="deletetitle" />
+	</bean>
+	<!-- 指南更改 -->
+	<bean id="SvrGuideOrder.modifytitle" class="com.huagu.my.service.SvrGuideOrder"
+		scope="prototype">
+		<property name="funcCode" value="modifytitle" />
+	</bean>
+	<!-- 查询订单信息 -->
+	<bean id="SvrOrder_My.findOrderList" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="findOrderList"></property>
+	</bean>
+	<!-- 查询订单详情 -->
+	<bean id="SvrOrder_My.findOrder" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="findOrder"></property>
+	</bean>
+	<!-- 添加地址 -->
+	<bean id="SvrAdrManager.addadr" class="com.huagu.my.service.SvrAdrManager"
+		scope="prototype">
+		<property name="funcCode" value="addadr"></property>
+	</bean>
+	<!-- 地址删除 -->
+	<bean id="SvrAdrManager.deleteadr" class="com.huagu.my.service.SvrAdrManager"
+		scope="prototype">
+		<property name="funcCode" value="deleteadr"></property>
+	</bean>
+	<!-- 地址修改 -->
+	<bean id="SvrAdrManager.adrmodify" class="com.huagu.my.service.SvrAdrManager"
+		scope="prototype">
+		<property name="funcCode" value="adrmodify"></property>
+	</bean>
+	<!-- 地址信息查询 -->
+	<bean id="SvrAdrManager.querydata" class="com.huagu.my.service.SvrAdrManager"
+		scope="prototype">
+		<property name="funcCode" value="querydata"></property>
+	</bean>
+	<!-- 添加用户意见 -->
+	<bean id="SvrFeedBack.addopinion" class="com.huagu.my.service.SvrFeedBack"
+		scope="prototype">
+		<property name="funcCode" value="addopinion"></property>
+	</bean>
+	<!--后台查询用户意见 -->
+	<bean id="SvrFeedBack.queryopinion" class="com.huagu.my.service.SvrFeedBack"
+		scope="prototype">
+		<property name="funcCode" value="queryopinion"></property>
+	</bean>
+	<!--前台查询用户意见 -->
+	<bean id="SvrFeedBack.opinionShow" class="com.huagu.my.service.SvrFeedBack"
+		scope="prototype">
+		<property name="funcCode" value="opinionShow"></property>
+	</bean>
+	<!--后台查询用户意见 -->
+	<bean id="SvrFeedBack.deleteadr" class="com.huagu.my.service.SvrFeedBack"
+		scope="prototype">
+		<property name="funcCode" value="deleteadr"></property>
+	</bean>
+	<!--后台回复意见 -->
+	<bean id="SvrFeedBack.addreply" class="com.huagu.my.service.SvrFeedBack"
+		scope="prototype">
+		<property name="funcCode" value="addreply"></property>
+	</bean>
+	<!-- 个人中心我的信息展示-->  
+	<bean id="SvrUserInfoQuery" class="com.huagu.more.services.SvrUserInfoQuery"
+		scope="prototype">
+	</bean>
+	<!-- 取消签到-->  
+	<bean id="SvrCancelSign" class="com.huagu.more.services.SvrCancelSign"
+		scope="prototype">
+	</bean>
+	<!-- 签到-->  
+	<bean id="SvrSign" class="com.huagu.more.services.SvrSign"
+		scope="prototype">
+	</bean>
+	<!-- 签到数量-->  
+	<bean id="SvrUserSign" class="com.huagu.more.services.SvrUserSign"
+		scope="prototype">
+	</bean>
+
+	<!-- 获取默认地址 -->
+	<bean id="SvrAdrManager.getDefAdr" class="com.huagu.my.service.SvrAdrManager"
+		scope="prototype">
+		<property name="funcCode" value="getDefAdr"></property>
+	</bean>
+	<!-- 后台机柜管理列表查询 -->
+	<bean id="SvrMyBoxGroupManage.list" class="com.huagu.box.manage.services.SvrMyBoxGroupManage" scope="prototype">
+	   <property name="funcCode" value="list" />
+	</bean>
+	<!-- 后台机柜管理详情（箱子列表）查询 -->
+	<bean id="SvrMyBoxGroupManage.cabinetDetail" class="com.huagu.box.manage.services.SvrMyBoxGroupManage" scope="prototype">
+	   <property name="funcCode" value="cabinetDetail" />
+	</bean>
+	<!-- 后台待配置柜组信息查看 -->
+	<bean id="SvrMyBoxGroupManage.checkBox" class="com.huagu.box.manage.services.SvrMyBoxGroupManage" scope="prototype">
+	   <property name="funcCode" value="checkBox" />
+	</bean>
+	<!-- 后台添加柜组基本信息 -->
+	<bean id="SvrMyBoxGroupManage.addBox" class="com.huagu.box.manage.services.SvrMyBoxGroupManage" scope="prototype">
+	   <property name="funcCode" value="addBox" />   
+	</bean>
+	<!--  -->
+	<!-- 后台订单列表 -->
+	<bean id="SvrDeliveryorder.findOrderList" class="com.huagu.order.service.SvrDeliveryorder"
+		scope="prototype">
+		<property name="funcCode" value="findOrderList"></property>
+	</bean>
+	<!-- 后台订单 -->
+	<bean id="SvrDeliveryorder.findOrder" class="com.huagu.order.service.SvrDeliveryorder"
+		scope="prototype">
+		<property name="funcCode" value="findOrder"></property>
+	</bean>
+	<!-- 后台订单修改物流信息 -->
+	<bean id="SvrDeliveryorder.updateOrder" class="com.huagu.order.service.SvrDeliveryorder"
+		scope="prototype">
+		<property name="funcCode" value="updateOrder"></property>
+	</bean>
+
+	<!-- 查询文章 -->
+	<bean id="SvrRentPact.selpact" class="com.huagu.consultation.service.SvrRentPact"
+		scope="prototype">
+		<property name="funcCode" value="selpact"></property>
+	</bean>
+	<!-- 修改文章-->
+	<bean id="SvrRentPact.editpact" class="com.huagu.consultation.service.SvrRentPact"
+		scope="prototype">
+		<property name="funcCode" value="editpact"></property>
+	</bean>
+	<!-- 查询管理列表-->
+	<bean id="SvrInformationList.ArticleListSel" class="com.huagu.consultation.service.SvrInformationList"
+		scope="prototype">
+		<property name="funcCode" value="ArticleListSel"></property>
+	</bean>
+	<!--文章想起个查看-->
+	<bean id="SvrInformationList.infoDetail" class="com.huagu.consultation.service.SvrInformationList"
+		scope="prototype">
+		<property name="funcCode" value="infoDetail"></property>
+	</bean>
+	<!-- 查询协议内容-->
+	<bean id="SvrViewProtocol.Protocolcontent" class="com.huagu.consultation.service.SvrViewProtocol"
+		scope="prototype">
+		<property name="funcCode" value="Protocolcontent"></property>
+	</bean>
+	<!-- 我的钱包 -->
+	<bean id="SvrMyMoeryQuery" class="com.huagu.myWallet.services.SvrMyMoeryQuery"
+		scope="prototype">
+	</bean>
+	<!-- 交易明细 -->
+	<bean id="SvrTransactionDetails" class="com.huagu.myWallet.services.SvrTransactionDetails"
+		scope="prototype">
+	</bean>
+	<!-- 订单状态修改 -->
+	<bean id="SvrOrder_My.updateOrder" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="updateOrder"></property>
+	</bean>
+	<!-- 获取用户信息 -->
+	<bean id="SvrGetUserInfo.getUserInfo" class="com.huagu.myService.services.SvrGetUserInfo" scope="prototype">
+		<property name="funcCode" value="getUserInfo"></property>
+	</bean>
+	<!-- 用户获得积分-->
+	<bean id="SvrAddUserJiFen" class="com.huagu.myService.services.SvrAddUserJiFen" scope="prototype">
+	</bean>
+	<!-- 捐赠说明后台展示-->
+	<bean id="SvrDonaExplainshow" class="com.huagu.donation.services.SvrDonaExplainshow" scope="prototype">
+	</bean>
+	<!-- 捐赠说明后台修改-->
+	<bean id="SvrExceplainUpdate" class="com.huagu.donation.services.SvrExceplainUpdate" scope="prototype">
+	</bean>
+	<!-- 捐赠说明后台得到要修改的数据-->
+	<bean id="SvrGetExplainById" class="com.huagu.donation.services.SvrGetExplainById" scope="prototype">
+	</bean>
+	<!-- 我要捐赠-->
+	<bean id="SvrMyDonationInsert" class="com.huagu.donation.services.SvrMyDonationInsert" scope="prototype">
+	</bean>
+	<!-- 我的捐赠前台查询展示-->
+	<bean id="SvrMyDonationsQuery" class="com.huagu.donation.services.SvrMyDonationsQuery" scope="prototype">
+	</bean>
+	<!-- 我的捐赠前台详情查看-->
+	<bean id="SvrMyDonationsDetail" class="com.huagu.donation.services.SvrMyDonationsDetail" scope="prototype">	
+	</bean>
+	<!-- 消息管理，消息列表-->
+	<bean id="SvrNewslist.getNews" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+	<property name="funcCode" value="getNews"></property>
+	</bean>
+	<!-- 消息管理，添加消息-->
+	<bean id="SvrNewslist.addNews" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+	<property name="funcCode" value="addNews"></property>
+	</bean>
+	<!-- 消息管理，添加消息-->
+	<bean id="SvrNewslist.getNewList" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+	<property name="funcCode" value="getNewList"></property>
+	</bean>
+	<!-- 消息管理，删除消息-->
+	<bean id="SvrNewslist.delNews" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+	<property name="funcCode" value="delNews"></property>
+	</bean>
+	<!-- 消息管理，修改消息-->
+	<bean id="SvrNewslist.upNews" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+	<property name="funcCode" value="upNews"></property>
+	</bean>
+	<!-- 用户归还物品，修改物流信息-->
+	<bean id="SvrOrder_My.seaExpReturn" class="com.huagu.my.service.SvrOrder_My" scope="prototype">
+		<property name="funcCode" value="seaExpReturn"></property>
+	</bean>
+	<!-- 用户归还物品，修改订单状态-->
+	<bean id="SvrOrder_My.upOrderRepair" class="com.huagu.my.service.SvrOrder_My" scope="prototype">
+		<property name="funcCode" value="upOrderRepair"></property>
+	</bean>
+	<!--积分后台查询展示-->
+	<bean id="SvrJiFenQuery" class="com.huagu.jiFenAndSign.services.SvrJiFenQuery" scope="prototype">
+	</bean>
+	<!--积分后台修改-->
+	<bean id="SvrJiFenUpdate" class="com.huagu.jiFenAndSign.services.SvrJiFenUpdate" scope="prototype">
+	</bean>
+	<!--拿到要修改的数据-->
+	<bean id="SvrGetJifenById" class="com.huagu.jiFenAndSign.services.SvrGetJifenById" scope="prototype">
+	</bean>
+	<!--后台积分查询展示-->
+	<bean id="SvrjiFenRecordQuery" class="com.huagu.jiFenAndSign.services.SvrjiFenRecordQuery" scope="prototype">
+	</bean>
+	<!--后台积分记录详情查看-->
+	<bean id="SvrjiFenRecordQueryDetails" class="com.huagu.jiFenAndSign.services.SvrjiFenRecordQueryDetails" scope="prototype">
+	</bean>
+	<!--后台签到记录查询展示-->
+	<bean id="SvrSignRecordQuery" class="com.huagu.jiFenAndSign.services.SvrSignRecordQuery" scope="prototype">
+	</bean>
+	<!--后台签到记录详情查看-->
+	<bean id="SvrSignDetails" class="com.huagu.jiFenAndSign.services.SvrSignDetails" scope="prototype">
+	</bean>
+	<!-- 用户评价，添加评价表-->
+	<bean id="SvrOrder_My.addEvaluate" class="com.huagu.my.service.SvrOrder_My" scope="prototype">
+		<property name="funcCode" value="addEvaluate"></property>
+	</bean>
+	
+	<!-- 帮助中心，查询文章-->
+	<bean id="SvrHelpcenter.getArticle" class="com.huagu.helpcenter.services.SvrHelpcenter" scope="prototype">
+		<property name="funcCode" value="getArticle"></property>
+		</bean>
+	<!-- 帮助中心，添加文章-->
+	<bean id="SvrHelpcenter.addArticle" class="com.huagu.helpcenter.services.SvrHelpcenter" scope="prototype">
+		<property name="funcCode" value="addArticle"></property>
+		</bean>
+	<!-- 帮助中心， 删除文章-->
+	<bean id="SvrHelpcenter.delArticle" class="com.huagu.helpcenter.services.SvrHelpcenter" scope="prototype">
+		<property name="funcCode" value="delArticle"></property>
+		</bean>
+	<!-- 帮助中心， 修改文章-->
+	<bean id="SvrHelpcenter.upArticle" class="com.huagu.helpcenter.services.SvrHelpcenter" scope="prototype">
+		<property name="funcCode" value="upArticle"></property>
+	</bean>
+	<!-- 根据主条码获取商品信息 -->
+	<bean id="SvrAdminPro.findPro" class="com.huagu.product.services.SvrAdminPro"
+		scope="prototype">
+		<property name="funcCode" value="findPro"></property>
+	</bean>
+	<!-- 优惠券发布-->
+	<bean id="SvrReleaseCoupon" class="com.huagu.coupon.service.SvrReleaseCoupon" scope="prototype">
+	</bean>
+	<!-- 优惠券发布详情-->
+	<bean id="SvrCouponDetails.details" class="com.huagu.coupon.service.SvrCouponDetails" scope="prototype">
+		<property name="funcCode" value="details"></property>	
+	</bean>
+	<!-- 删除优惠券-->
+	<bean id="SvrCouponDetails.delcoupon" class="com.huagu.coupon.service.SvrCouponDetails" scope="prototype">
+		<property name="funcCode" value="delcoupon"></property>	
+	</bean>
+	<!-- 后台积分类型查询展示-->
+	<bean id="SvrJiFenTypeQuery" class="com.huagu.jiFenAndSign.services.SvrJiFenTypeQuery" scope="prototype">
+	</bean>
+	<!-- 后台积分类型详情查看-->
+	<bean id="SvrJiFenTypeDetail" class="com.huagu.jiFenAndSign.services.SvrJiFenTypeDetail" scope="prototype">
+	</bean>
+	<!-- 后台积分类型修改-->
+	<bean id="SvrJiFenTypeUpdate" class="com.huagu.jiFenAndSign.services.SvrJiFenTypeUpdate" scope="prototype">
+	</bean>
+	<!-- 查看意见反馈详情-->
+	<bean id="SvrFeedBack.opinionDetail" class="com.huagu.my.service.SvrFeedBack" scope="prototype">
+		<property name="funcCode" value="opinionDetail"></property>	
+	</bean>
+	<!--根据商品Id判断该主电子条码Id是否此类商品的 -->
+	<bean id="SvrAdminRentPro.findzhuCode" class="com.huagu.product.services.SvrAdminRentPro" scope="prototype">
+		<property name="funcCode" value="findzhuCode"></property>
+	</bean>
+	<!--根据主电子Id获取配件条码信息 -->
+	<bean id="SvrAdminRentPro.findCixx" class="com.huagu.product.services.SvrAdminRentPro" scope="prototype">
+		<property name="funcCode" value="findCixx"></property>
+	</bean>
+	<!--商务合作查询展示-->
+	<bean id="SvrBussinessQuery" class="com.huagu.more.services.SvrBussinessQuery" scope="prototype">
+	</bean>
+	<!--商务合作详情查看-->  
+	<bean id="SvrBussinessDetails" class="com.huagu.more.services.SvrBussinessDetails" scope="prototype">
+	</bean>
+	<!--修改商务合作信息-->
+	<bean id="SvrBussinessUpdate" class="com.huagu.more.services.SvrBussinessUpdate" scope="prototype">
+	</bean>
+	<!--使用流程-->
+	<bean id="SvrProcessQuery" class="com.huagu.more.services.SvrProcessQuery" scope="prototype">
+	</bean>
+	<!--修改使用流程-->
+	<bean id="SvrProcessModify" class="com.huagu.more.services.SvrProcessModify" scope="prototype">
+	</bean>
+	<!--查看使用流程详情-->
+	<bean id="SvrProcessDetails" class="com.huagu.more.services.SvrProcessDetails" scope="prototype">
+	</bean>
+	<!--代理商列表-->
+	<bean id="SvrAgentQuery" class="com.huagu.agentAndCom.services.SvrAgentQuery" scope="prototype">
+	</bean>
+	<!--关联社区详情-->
+	<bean id="SvrComDetails" class="com.huagu.agentAndCom.services.SvrComDetails" scope="prototype">
+	</bean>
+	<!--变更代理商信息-->
+	<bean id="SvrAgentModify" class="com.huagu.agentAndCom.services.SvrAgentModify" scope="prototype">
+	</bean>
+	<!--代理商详情查看-->
+	<bean id="SvrAgentDetails" class="com.huagu.agentAndCom.services.SvrAgentDetails" scope="prototype">
+	</bean>
+	<!--添加省级代理商-->
+	<bean id="SvrAgentInsert" class="com.huagu.agentAndCom.services.SvrAgentInsert" scope="prototype">
+	</bean>
+	<!--删除代理商-->
+	<bean id="SvrAgentDelete" class="com.huagu.agentAndCom.services.SvrAgentDelete" scope="prototype">
+	</bean>
+	<!-- 用户使用零钱支付 -->
+	<bean id="SvrOrder_Lease.payment" class="com.huagu.my.service.SvrOrder_Lease"
+		scope="prototype">
+		<property name="funcCode" value="payment"></property>
+	</bean>
+	<!-- 用户端查看柜组详情 -->
+	<bean id="SvrMyBoxGroup.detail" class="com.huagu.box.front.services.SvrMyBoxGroup" scope="prototype">
+	   <property name="funcCode" value="detail" />
+	</bean>
+	<!-- 用户端查看附近柜组列表 -->
+	<bean id="SvrMyBoxGroup.list" class="com.huagu.box.front.services.SvrMyBoxGroup" scope="prototype">
+	   <property name="funcCode" value="list" />
+	</bean>
+	<!-- 运维登录 查询当前运维人员 -->
+	<bean id="SvrMyCabinet" class="com.huagu.maintain.service.SvrMyCabinet" scope="prototype">
+	</bean>
+	<!-- 配置柜组 -->
+	<bean id="SvrDepolyCabinet" class="com.huagu.maintain.service.SvrDepolyCabinet" scope="prototype">
+	</bean>
+	<!-- 配置柜组 -->
+	<bean id="SvrGetCabinetBox" class="com.huagu.maintain.service.SvrGetCabinetBox" scope="prototype">
+	</bean>
+	<!-- 配置柜组-添加箱子 -->
+	<bean id="SvrAddDepolyCabinetBox" class="com.huagu.maintain.service.SvrAddDepolyCabinetBox" scope="prototype">
+	</bean>
+	<!-- 社区列表查询 -->
+	<bean id="SvrComQuery" class="com.huagu.agentAndCom.services.SvrComQuery" scope="prototype">
+	</bean>
+	<!-- 添加社区信息-->
+	<bean id="SvrInsertCommunity" class="com.huagu.agentAndCom.services.SvrInsertCommunity" scope="prototype">
+	</bean>
+	<!-- 得到要修改的社区信息-->
+	<bean id="SvrGetComById" class="com.huagu.jiFenAndSign.services.SvrGetComById" scope="prototype">
+	</bean>
+	<!-- 修改社区信息-->
+	<bean id="SvrComModify" class="com.huagu.agentAndCom.services.SvrComModify" scope="prototype">
+	</bean>
+	<!-- 运维根据主电子条码，状态是6：已归还，获取订单信息 -->
+	<bean id="SvrDeliveryorder.findOrd" class="com.huagu.order.service.SvrDeliveryorder"
+		scope="prototype">
+		<property name="funcCode" value="findOrd"></property>
+	</bean>
+	<!-- 运维根据主电子条码，状态是6：已归还，获取订单信息 -->
+	<bean id="SvrProDetails.findOpe" class="com.huagu.operate.service.SvrProDetails"
+		scope="prototype">
+		<property name="funcCode" value="findOpe"></property>
+	</bean>
+	<!-- 运维根据主电子条码，状态是6：已归还，获取订单信息 -->
+	<bean id="SvrProDetails.addOperate" class="com.huagu.operate.service.SvrProDetails"
+		scope="prototype">
+		<property name="funcCode" value="addOperate"></property>
+	</bean>
+	<!-- 运维根据主电子条码，状态是6：已归还，获取订单信息 -->
+	<bean id="SvrProDetails.findOrdList" class="com.huagu.operate.service.SvrProDetails"
+		scope="prototype">
+		<property name="funcCode" value="findOrdList"></property>
+	</bean>
+	<!-- 得到要修改的社区信息-->
+	<bean id="SvrChangeCom" class="com.huagu.agentAndCom.services.SvrChangeCom" scope="prototype">
+	</bean>
+	<!-- 删除社区代理挂靠-->
+	<bean id="SvrDeleteComAgent" class="com.huagu.agentAndCom.services.SvrDeleteComAgent" scope="prototype">
+	</bean>
+	<!-- 查询当前挂靠代理-->
+	<bean id="SvrComAgentQuery" class="com.huagu.agentAndCom.services.SvrComAgentQuery" scope="prototype">
+	</bean>
+	<!-- 拿到要变更的代理商的社区管辖信息-->
+	<bean id="SvrGetChangeAgent" class="com.huagu.agentAndCom.services.SvrGetChangeAgent" scope="prototype">
+	</bean>
+	<!-- 变更的代理商的社区管辖信息-->
+	<bean id="SvrChangeAgent" class="com.huagu.agentAndCom.services.SvrChangeAgent" scope="prototype">
+	</bean>
+	<!-- 查询代理商管辖的社区-->
+	<bean id="SvrComsQuery" class="com.huagu.agentAndCom.services.SvrComsQuery" scope="prototype">
+	</bean>
+	<!-- 删除社区信息-->
+	<bean id="SvrDeleteCom" class="com.huagu.agentAndCom.services.SvrDeleteCom" scope="prototype">
+	</bean>
+	<!-- 添加省级代理-->
+	<bean id="SvrProvinceAgent" class="com.huagu.agentAndCom.services.SvrProvinceAgent" scope="prototype">
+	</bean>
+	<!-- 区域列表查询（后台）-->
+	<bean id="SvrAreaQuery" class="com.huagu.agentAndCom.services.SvrAreaQuery" scope="prototype">
+	</bean>
+	<!-- 查看详情-->
+	<bean id="SvrAreaDetail" class="com.huagu.agentAndCom.services.SvrAreaDetail" scope="prototype">
+	</bean>
+	<!-- 修改区域信息-->
+	<bean id="SvrAreaModify" class="com.huagu.agentAndCom.services.SvrAreaModify" scope="prototype">
+	</bean>
+	<!-- 删除区域信息-->
+	<bean id="SvrAreaDelete" class="com.huagu.agentAndCom.services.SvrAreaDelete" scope="prototype">
+	</bean>
+	<!-- 添加区域信息-->
+	<bean id="SvrAreaInsert" class="com.huagu.agentAndCom.services.SvrAreaInsert" scope="prototype">
+	</bean>
+	<!-- 根据用户Id获取订单信息 -->
+	<bean id="SvrProDetails.findHisOrd" class="com.huagu.operate.service.SvrProDetails"
+		scope="prototype">
+		<property name="funcCode" value="findHisOrd"></property>
+	</bean>
+	<!-- 根据用户ID获取用户信息 -->
+	<bean id="SvrProDetails.finduser" class="com.huagu.operate.service.SvrProDetails"
+		scope="prototype">
+		<property name="funcCode" value="finduser"></property>
+	</bean>
+	<!-- 根据zhuCode获取箱子信息 -->
+	<bean id="SvrOrder_My.getBox" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="getBox"></property>
+	</bean>
+	<!-- 根据柜子ID获取柜子信息 （用户开箱）-->
+	<bean id="SvrOrderInterface.getCab" class="com.huagu.order.service.SvrOrderInterface"
+		scope="prototype">
+		<property name="funcCode" value="getCab"></property>
+	</bean>
+	<!-- 用户关箱 -->
+	<bean id="SvrOrderInterface.upCab" class="com.huagu.order.service.SvrOrderInterface"
+		scope="prototype">
+		<property name="funcCode" value="upCab"></property>
+	</bean>
+		<!-- 查询省 -->
+	<bean id="SvrQueryAddress" class="com.huagu.agentAndCom.services.SvrQueryAddress"
+		scope="prototype">
+	</bean>
+	<!-- 查询市 -->
+	<bean id="SvrQueryCityArea" class="com.huagu.agentAndCom.services.SvrQueryCityArea"
+		scope="prototype">
+	</bean>
+	<!-- 查询区 -->
+	<bean id="SvrQueryArea" class="com.huagu.agentAndCom.services.SvrQueryArea"
+		scope="prototype">
+	</bean>
+	
+	<!-- 新增交易记录 -->
+	<bean id="SvrPayLog" class="com.huagu.pay.service.SvrPayLog" scope="prototype">
+	</bean>
+	
+	<!-- 修改用户账户可用余额 -->
+	<bean id="SvrAddUserMoney" class="com.huagu.pay.service.SvrAddUserMoney" scope="prototype">
+	</bean>
+	
+	<!-- 查询商品二级分类 -->
+	<bean id="SvrProType.querySecondType" class="com.huagu.product.services.SvrProType" scope="prototype">
+		<property name="funcCode" value="querySecondType"></property>
+	</bean>
+	<!-- 服务协议 -->
+    	<bean id="SvrServiceAgreement.getAgreement" class="com.huagu.setUp.service.SvrServiceAgreement"
+        	scope="prototype">
+        	<property name="funcCode" value="getAgreement"></property>
+   	 </bean>
+   	 <!-- 个人资料 -->
+   	 <bean id="SvrPersonalData.getData" class="com.huagu.setUp.service.SvrPersonalData"
+        	scope="prototype">
+        	<property name="funcCode" value="getData"></property>
+   	 </bean>
+	 <!-- 财务列表-->
+    	<bean id="SvrFinanceQuery" class="com.huagu.myWallet.services.SvrFinanceQuery"
+       		 scope="prototype">
+    	</bean>
+
+   	 <!-- 租赁商品搜索 -->
+    	<bean id="SvrRentWei.searchProduct" class="com.huagu.product.services.SvrRentWei" scope="prototype">
+       		 <property name="funcCode" value="searchProduct"></property>
+    	</bean>
+     <!-- 售卖商品搜索 -->
+    	<bean id="SvrRentWei.searchSaleProduct" class="com.huagu.product.services.SvrRentWei" scope="prototype">
+       		 <property name="funcCode" value="searchSaleProduct"></property>
+    	</bean>
+   	 <!-- 附近推荐商品 -->
+    	<bean id="SvrRentWei.searchNear" class="com.huagu.product.services.SvrRentWei" scope="prototype">
+      		  <property name="funcCode" value="searchNear"></property>
+   	 </bean>
+   	 <!-- 热租分类 -->
+   	 <bean id="SvrRentWei.getCoolType" class="com.huagu.product.services.SvrRentWei" scope="prototype">
+       		 <property name="funcCode" value="getCoolType"></property>
+   	</bean>
+   	 <!-- 热租商品 -->
+    	<bean id="SvrRentWei.getCools" class="com.huagu.product.services.SvrRentWei" scope="prototype">
+        	<property name="funcCode" value="getCools"></property>
+    	</bean>
+	<!-- 根据zhuCode_获取柜子信息 -->
+    <bean id="SvrOrder_Lease.getBox" class="com.huagu.my.service.SvrOrder_Lease"
+        scope="prototype">
+        <property name="funcCode" value="getBox"></property>
+    </bean>
+    <!-- 根据地址地址信息获取柜子信息 -->
+    <bean id="SvrAdrManager.getBox" class="com.huagu.my.service.SvrAdrManager"
+		scope="prototype">
+		<property name="funcCode" value="getBox"></property>
+	</bean>
+       
+    <!-- 优惠券是否使用 -->
+    <bean id="SvrMyCenter.getMyData" class="com.huagu.my.service.SvrMyCenter"
+        scope="prototype">
+        <property name="funcCode" value="getMyData"></property>
+    </bean>
+
+    <!-- 签到说明-->
+    <bean id="SvrSignExplain" class="com.huagu.more.services.SvrSignExplain"
+        scope="prototype">
+    </bean>
+    <!-- 拿到要编辑的签到说明数据-->
+    <bean id="SvrSignDetail" class="com.huagu.more.services.SvrSignDetail"
+        scope="prototype">
+    </bean>
+    <!--编辑签到说明-->
+    <bean id="SvrEditSignExplain" class="com.huagu.more.services.SvrEditSignExplain"
+        scope="prototype">
+    </bean>
+    <!--查询我的总积分-->
+    <bean id="SvrMySignNum" class="com.huagu.more.services.SvrMySignNum"
+        scope="prototype">
+    </bean>
+     <!--查询我的积分记录-->
+    <bean id="SvrMySignRecords" class="com.huagu.more.services.SvrMySignRecords"
+        scope="prototype">
+    </bean>
+    <!--积分说名后台展示-->
+    <bean id="SvrIntegralExplain" class="com.huagu.more.services.SvrIntegralExplain"
+        scope="prototype">
+    </bean>
+    <!--拿到要编辑的积分说明信息-->
+    <bean id="SvrGetInEXbyId" class="com.huagu.more.services.SvrGetInEXbyId"
+        scope="prototype">
+    </bean>
+    <!--编辑积分说明-->
+    <bean id="SvrEditIntExp" class="com.huagu.more.services.SvrEditIntExp"
+        scope="prototype">
+    </bean>
+     <!-- 关于我们（运维端） -->
+    <bean id="SvrAboutUsAndPhone.aboutUs" class="com.huagu.my.service.SvrAboutUsAndPhone"
+        scope="prototype">
+        <property name="funcCode" value="aboutUs"></property>
+    </bean>
+      <!-- 客服电话（运维端） -->
+    <bean id="SvrAboutUsAndPhone.Phone" class="com.huagu.my.service.SvrAboutUsAndPhone"
+        scope="prototype">
+        <property name="funcCode" value="Phone"></property>
+    </bean>
+	<!-- 根据用户ID获取用户总租金-->
+	<bean id="SvrOrder_My.getTotCashPledge" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="getTotCashPledge"></property>
+	</bean>
+	
+	<!-- 根据用户ID获取用户租金明细-->
+	<bean id="SvrOrder_My.getCashPledge" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="getCashPledge"></property>
+	</bean>
+    <!-- 获取用户信息 -->
+	<bean id="SvrUserList" class="com.huagu.admin.services.SvrUserList" scope="prototype">
+	</bean>
+    <!-- 查询收藏列表 -->
+    <bean id="SvrCollect.search" class="com.huagu.my.service.SvrCollect" scope="prototype">
+        <property name="funcCode" value="search"></property>
+    </bean>
+    <!-- 新增收藏 -->
+    <bean id="SvrCollect.add" class="com.huagu.my.service.SvrCollect" scope="prototype">
+        <property name="funcCode" value="add"></property>
+    </bean>
+    <!-- 删除收藏 -->
+    <bean id="SvrCollect.delete" class="com.huagu.my.service.SvrCollect" scope="prototype">
+        <property name="funcCode" value="delete"></property>
+    </bean>
+    <!-- 查询优惠卷 -->
+    <bean id="SvrCouponState.coupon" class="com.huagu.coupon.service.SvrCouponState" scope="prototype">
+        <property name="funcCode" value="coupon"></property>
+    </bean>
+
+     <!-- 意见反馈（运维端） -->
+    <bean id="SvrFeedBackYunWei.selectFeedBack" class="com.huagu.my.service.SvrFeedBackYunWei" scope="prototype">
+        <property name="funcCode" value="selectFeedBack"></property>
+    </bean>
+    <!-- 消息管理(运维端)-->
+    <bean id="SvrNewslist.getNew" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+    	<property name="funcCode" value="getNew"></property>
+    </bean>
+    <!-- 查询系统箱子 -->
+    <bean id="SvrGetControl" class="com.huagu.control.service.SvrGetControl" scope="prototype">
+    </bean>
+    <!-- 添加箱子-->
+    <bean id="SvrAddControl" class="com.huagu.control.service.SvrAddControl" scope="prototype">
+     </bean> 
+    <!-- 优惠券总数-->
+    <bean id="SvrCouponAll.getCouponAll" class="com.huagu.more.services.SvrCouponAll" scope="prototype">
+        <property name="funcCode" value="getCouponAll"></property>
+    </bean>
+     <!-- 附近柜模糊查询-->
+    <bean id="SvrMyBoxGroupfind.findGroup" class="com.huagu.box.front.services.SvrMyBoxGroupfind" scope="prototype">
+        <property name="funcCode" value="findGroup"></property>
+    </bean>
+ 	<!-- 使用指南详情查看-->
+    <bean id="SvrGuideDetails" class="com.huagu.my.service.SvrGuideDetails" scope="prototype">
+    </bean>
+    <!-- 我的分享 得到我的信息-->
+    <bean id="SvrMyInfoShow" class="com.huagu.myService.services.SvrMyInfoShow" scope="prototype">
+    </bean>
+    <!-- 我的分享 得到我邀请的人数-->
+    <bean id="SvrMyShare" class="com.huagu.myService.services.SvrMyShare" scope="prototype">
+    </bean>
+     <!-- 我的分享 得到分享人-->
+    <bean id="SvrMyShareQuery" class="com.huagu.myService.services.SvrMyShareQuery" scope="prototype">
+    </bean>
+    <!-- 查询首页系统公告 -->
+    <bean id="SvrRentWei.getMessages" class="com.huagu.product.services.SvrRentWei" scope="prototype">
+        <property name="funcCode" value="getMessages"></property>
+    </bean>
+    <!-- 查询柜子信息 -->
+    <bean id="SvrMyBoxGroup.boxPosition" class="com.huagu.box.front.services.SvrMyBoxGroup" scope="prototype">
+        <property name="funcCode" value="boxPosition"></property>
+    </bean>
+    <!-- 添加积分等级 -->
+    <bean id="SvrLevelInsert" class="com.huagu.jiFenAndSign.services.SvrLevelInsert" scope="prototype">
+    </bean>
+     <!-- 删除积分等级 -->
+    <bean id="SvrDeleteLevel" class="com.huagu.jiFenAndSign.services.SvrDeleteLevel" scope="prototype">
+    </bean>
+    <!-- 查询商品收藏状态 -->
+    <bean id="SvrCollect.getCollectByProid" class="com.huagu.my.service.SvrCollect" scope="prototype">
+        <property name="funcCode" value="getCollectByProid"></property>
+    </bean>
+    <!-- 消息管理 -->
+	<bean id="SvrMessage_Insert" class="com.huagu.common.services.message.SvrMessage_Insert"
+		scope="prototype">
+	</bean>
+	<!-- 用户退款 -->
+	<bean id="SvrOrder_My.refund" class="com.huagu.my.service.SvrOrder_My"
+		scope="prototype">
+		<property name="funcCode" value="refund"></property>
+	</bean>
+    <!-- 查询柜子主页面基本信息————————————————————————中控屏接口——————————————————————  -->
+    <bean id="SvrGetControlHome" class="com.huagu.control.service.SvrGetControlHome" scope="prototype">
+    </bean>
+    <!-- 查询柜子轮播喇叭列表 -->
+    <bean id="SvrGetControlMsg" class="com.huagu.control.service.SvrGetControlMsg" scope="prototype">
+    </bean>
+    <!-- 查询柜子社区服务列表 -->
+    <bean id="SvrGetControlShequService" class="com.huagu.control.service.SvrGetControlShequService" scope="prototype">
+    </bean>
+    <!-- 查询柜子社区服务列表 -->
+    <bean id="SvrControlAdminLogin" class="com.huagu.control.service.SvrControlAdminLogin" scope="prototype">
+    </bean>
+    <!-- 查询柜子疑难解答列表————————————————————————中控屏接口—————————————————————— -->
+    <bean id="SvrGetControlAnswer" class="com.huagu.control.service.SvrGetControlAnswer" scope="prototype">
+     </bean>
+    <!-- 查询系统消息（用户端）-->
+    <bean id="SvrGetMessage.getSystem" class="com.huagu.newslist.services.SvrGetMessage" scope="prototype">
+        <property name="funcCode" value="getSystem"></property>
+    </bean>
+    <!-- 查询订单消息（用户端）-->
+    <bean id="SvrGetMessage.getOrder" class="com.huagu.newslist.services.SvrGetMessage" scope="prototype">
+        <property name="funcCode" value="getOrder"></property>
+    </bean>
+     <!-- 查询系统消息详情（用户端）-->
+    <bean id="SvrGetMessage.getSystemDetails" class="com.huagu.newslist.services.SvrGetMessage" scope="prototype">
+        <property name="funcCode" value="getSystemDetails"></property>
+    </bean>
+
+	<!-- 查看是否有优惠卷-->
+	<bean id="SvrOrder_Lease.getCoupon" class="com.huagu.my.service.SvrOrder_Lease"
+		scope="prototype">
+		<property name="funcCode" value="getCoupon"></property>
+	</bean>
+
+    <!-- 社区服务（后台）-->
+    <bean id="SvrCommunityList.getSvrCommunityList" class="com.huagu.community.service.SvrCommunityList" scope="prototype">
+        <property name="funcCode" value="getSvrCommunityList"></property>
+    </bean>
+    <!-- 社区服务添加（后台）-->
+    <bean id="SvrCommunityList.addSvrCommunityList" class="com.huagu.community.service.SvrCommunityList" scope="prototype">
+        <property name="funcCode" value="addSvrCommunityList"></property>
+    </bean>
+    <!-- 社区服务删除（后台）-->
+    <bean id="SvrCommunityList.delSvrCommunityList" class="com.huagu.community.service.SvrCommunityList" scope="prototype">
+        <property name="funcCode" value="delSvrCommunityList"></property>
+    </bean>
+      <!-- 社区服务修改（后台）-->
+    <bean id="SvrCommunityList.upSvrCommunityList" class="com.huagu.community.service.SvrCommunityList" scope="prototype">
+        <property name="funcCode" value="upSvrCommunityList"></property>
+    </bean>
+      <!-- 疑难解答（后台）-->
+    <bean id="SvrTroubleshooting.getTroubleshooting" class="com.huagu.troubleshooting.service.SvrTroubleshooting" scope="prototype">
+        <property name="funcCode" value="getTroubleshooting"></property>
+    </bean>
+    <!-- 疑难解答添加（后台）-->
+    <bean id="SvrTroubleshooting.addTroubleshooting" class="com.huagu.troubleshooting.service.SvrTroubleshooting" scope="prototype">
+        <property name="funcCode" value="addTroubleshooting"></property>
+    </bean>
+    <!-- 疑难解答删除（后台）-->
+    <bean id="SvrTroubleshooting.delTroubleshooting" class="com.huagu.troubleshooting.service.SvrTroubleshooting" scope="prototype">
+        <property name="funcCode" value="delTroubleshooting"></property>
+    </bean>
+      <!-- 疑难解答修改（后台）-->
+    <bean id="SvrTroubleshooting.upTroubleshooting" class="com.huagu.troubleshooting.service.SvrTroubleshooting" scope="prototype">
+        <property name="funcCode" value="upTroubleshooting"></property>
+    </bean>
+     <!-- 添加交易记录接口-->
+    <bean id="SvrMoneyRecord" class="com.huagu.common.services.moneyRecord.SvrMoneyRecord" scope="prototype">
+    </bean>
+     <!-- 物流列表查询-->
+    <bean id="SvrLogisticsQuery" class="com.huagu.order.service.SvrLogisticsQuery" scope="prototype">
+    </bean>
+	<!--订单物流详情查看-->
+    <bean id="SvrLogisticsDetails" class="com.huagu.order.service.SvrLogisticsDetails" scope="prototype">
+    </bean>
+    <!--查询首页列表-->
+    <bean id="SvrgetUserList" class="com.huagu.userList.service.SvrgetUserList" scope="prototype">
+    </bean>
+     <!--商品与柜子配置-->
+    <bean id="SvrConfigure" class="com.huagu.order.service.SvrConfigure" scope="prototype">
+    </bean>
+    <!--得到箱子id-->
+    <bean id="SvrGetBoxId" class="com.huagu.order.service.SvrGetBoxId" scope="prototype">
+    </bean>
+       <!-- 修改中控屏视频-->
+    <bean id="SvrHomeAd.getHomeAd" class="com.huagu.product.services.SvrHomeAd" scope="prototype">
+    <property name="funcCode" value="getHomeAd"></property>
+    </bean>
+      <!-- 修改中控屏视频-->
+    <bean id="SvrHomeAd.upHomeAd" class="com.huagu.product.services.SvrHomeAd" scope="prototype">
+    <property name="funcCode" value="upHomeAd"></property>
+    </bean>
+     <!-- 查询单条视频数据-->
+    <bean id="SvrHomeAd.selectAd" class="com.huagu.product.services.SvrHomeAd" scope="prototype">
+    <property name="funcCode" value="selectAd"></property>
+    </bean>
+    <!-- 查询操作日志（后台）-->
+    <bean id="SvrOperationLog" class="com.huagu.logs.service.SvrOperationLog" scope="prototype">
+    </bean>
+    <!-- 同步柜子下的箱子 -->
+    <bean id="SvrControlSyncBox" class="com.huagu.control.service.SvrControlSyncBox" scope="prototype">
+    </bean>
+    <!-- 同步柜子下的所有的标签信息 -->
+    <bean id="SvrControlSyncLabelInfo" class="com.huagu.control.service.SvrControlSyncLabelInfo" scope="prototype">
+    </bean>
+    <!-- 查看现有配置箱子-->
+    <bean id="SvrGetCabinetPzBox" class="com.huagu.control.service.SvrGetCabinetPzBox" scope="prototype">
+    </bean>
+
+    <!-- 查看送货到柜详情-->
+    <bean id="SvrToBoxDetrails" class="com.huagu.order.service.SvrToBoxDetrails" scope="prototype">
+    </bean>
+
+    <!-- 查询用户详情（后台）-->
+   	<bean id="SvrgetUserDetail.detail" class="com.huagu.userList.service.SvrgetUserDetail" scope="prototype">
+        <property name="funcCode" value="detail"></property>
+  	</bean>
+    <!-- 查询用户资金流水-->
+   	<bean id="SvrGetUserRecord" class="com.huagu.userList.service.SvrGetUserRecord" scope="prototype">
+  	</bean>
+    <!-- 查询个人用户征信配置-->
+   	<bean id="SvrGetUserPersonalCredit" class="com.huagu.userList.service.SvrGetUserPersonalCredit" scope="prototype">
+  	</bean>
+    <!-- 查询用户在租商品押金-->
+   	<bean id="SvrGetUserOrderMoney" class="com.huagu.userList.service.SvrGetUserOrderMoney" scope="prototype">
+  	</bean>
+   	<!-- 箱柜区域管理-->
+    <bean id="SvrBoxCommQuery" class="com.huagu.agentAndCom.services.SvrBoxCommQuery" scope="prototype">
+    </bean>
+    <!-- 删除评价-->
+    <bean id="SvrDeleEve" class="com.huagu.product.services.SvrDeleEve" scope="prototype">
+    </bean>
+	<!-- 运维单查询展示-->
+    <bean id="SvrYunWeiQuery" class="com.huagu.ywManage.services.SvrYunWeiQuery" scope="prototype">
+    </bean>
+    <!-- 查看运维图片-->
+    <bean id="SvrYunWeiImgQuery" class="com.huagu.ywManage.services.SvrYunWeiImgQuery" scope="prototype">
+    </bean>
+    <!--得到要修改折损率的运维单信息-->
+    <bean id="SvrGetYunWeiBill" class="com.huagu.ywManage.services.SvrGetYunWeiBill" scope="prototype">
+    </bean>
+       <!--修改运维单的折损率-->
+    <bean id="SvrModifySale" class="com.huagu.ywManage.services.SvrModifySale" scope="prototype">
+    </bean>
+     <!--调货单查询展示-->
+    <bean id="SvrDiaoHuoQuery" class="com.huagu.ywManage.services.SvrDiaoHuoQuery" scope="prototype">
+    </bean>
+     <!--折损管理查询展示-->
+    <bean id="SvrLossMgt" class="com.huagu.ywManage.services.SvrLossMgt" scope="prototype">
+    </bean>
+    <!--折损管理查询单条展示-->
+    <bean id="SvrLossQuery" class="com.huagu.ywManage.services.SvrLossQuery" scope="prototype">
+    </bean>
+    <!--得到要变更报修状态的调货单-->
+    <bean id="SvrGetRepairInfo" class="com.huagu.ywManage.services.SvrGetRepairInfo" scope="prototype">
+    </bean>
+    <!--变更调货单的报修状态-->
+    <bean id="SvrModifyRepair" class="com.huagu.ywManage.services.SvrModifyRepair" scope="prototype">
+    </bean>
+       <!--补货单查询展示-->
+    <bean id="SvrAddGoodsQuery" class="com.huagu.ywManage.services.SvrAddGoodsQuery" scope="prototype">
+    </bean>
+   	<!-- 版本  -->
+    <bean id="SvrVersionUpdate" class="com.huagu.control.service.SvrVersionUpdate" scope="prototype">
+    </bean>
+   	<!-- 得到系统用户所有的金钱余额  -->
+    <bean id="SvrGetUserMoney" class="com.huagu.myWallet.services.SvrGetUserMoney" scope="prototype">
+    </bean>
+   	<!-- 得到用户充值/提现金额  -->
+    <bean id="SvrGetRechargeMoney" class="com.huagu.myWallet.services.SvrGetRechargeMoney" scope="prototype">
+    </bean>
+   	<!-- 得到系统所有押金  -->
+    <bean id="SvrGetYaJin" class="com.huagu.myWallet.services.SvrGetYaJin" scope="prototype">
+    </bean>
+    <!-- 前台运维单详情查看  -->
+    <bean id="SvrYDetailsQuery" class="com.huagu.ywManage.services.SvrYDetailsQuery" scope="prototype">
+    </bean>
+     <!-- 前台调货单详情查看  -->
+    <bean id="SvrDHetailsQuery" class="com.huagu.ywManage.services.SvrDHetailsQuery" scope="prototype">
+    </bean>
+    <!-- 前台补货单详情查看  -->
+    <bean id="SvrBHetailsQuery" class="com.huagu.ywManage.services.SvrBHetailsQuery" scope="prototype">
+    </bean>
+    <!-- 折损单审核  -->
+    <bean id="SvrLossUpdate" class="com.huagu.ywManage.services.SvrLossUpdate" scope="prototype">
+    </bean>
+    <!-- 智能柜广告管理  -->
+    <bean id="SvrCabinetAd" class="com.huagu.maintain.service.SvrCabinetAd" scope="prototype">
+    </bean>
+    <!-- 修改智能柜广告轮播图片  -->
+    <bean id="SvrCabinetImgAd" class="com.huagu.maintain.service.SvrCabinetImgAd" scope="prototype">
+    </bean>
+    <!-- 查询所有智能柜信息  -->
+    <bean id="SvrGetCabinetId" class="com.huagu.maintain.service.SvrGetCabinetId" scope="prototype">
+    </bean>
+    <!-- 更新用户的身份证信息  -->
+    <bean id="SvrUserCard" class="com.huagu.creditManagement.service.SvrUserCard" scope="prototype">
+    </bean>
+    <!-- 得到一级分类名称  -->
+    <bean id="SvrGetFirstName" class="com.huagu.product.services.SvrGetFirstName" scope="prototype">
+    </bean>
+    <!--赔付单展示  -->
+    <bean id="SvrIndemnityShow" class="com.huagu.indemnity.services.SvrIndemnityShow" scope="prototype">
+    </bean>
+    <!--赔付单详情查看  -->
+    <bean id="SvrIndemnityDetails" class="com.huagu.indemnity.services.SvrIndemnityDetails" scope="prototype">
+    </bean>
+    <!-- 查询所有征信配置  -->
+    <bean id="SvrGetCreditDeploy" class="com.huagu.creditManagement.service.SvrGetCreditDeploy" scope="prototype">
+    </bean>
+    <!-- 查询芝麻信用授权历史信息  -->
+    <bean id="SvrGetSesameLog" class="com.huagu.creditManagement.service.SvrGetSesameLog" scope="prototype">
+    </bean>
+    <!-- 版本控制  -->
+    <bean id="SvrGetVersion" class="com.huagu.common.services.version.SvrGetVersion" scope="prototype">
+    </bean>
+     <!--修改赔付单信息 -->
+    <bean id="SvrIndemnityUpdate" class="com.huagu.indemnity.services.SvrIndemnityUpdate" scope="prototype">
+    </bean>
+    <!--添加赔付单信息 -->
+    <bean id="SvrIndemnityInsert" class="com.huagu.indemnity.services.SvrIndemnityInsert" scope="prototype">
+    </bean>
+     <!--得到当前用户/赔付单号/租赁单号 -->
+    <bean id="SvrUserAndIndemnity" class="com.huagu.indemnity.services.SvrUserAndIndemnity" scope="prototype">
+    </bean>
+       <!--根据条件查询赔付单信息 -->
+    <bean id="SvrOrderInfo" class="com.huagu.indemnity.services.SvrOrderInfo" scope="prototype">
+	 </bean>
+    <!-- 后台修改客户专属用  -->
+    <bean id="SvrAdminUserUpdate" class="com.huagu.userList.service.SvrAdminUserUpdate" scope="prototype">
+    </bean>
+
+    <!-- 查询商品历史运维情况  -->
+    <bean id="SvrGetywRecords" class="com.huagu.indemnity.services.SvrGetywRecords" scope="prototype">
+    </bean>
+    <!-- 操作赔付单（生效） -->
+    <bean id="SvrOperateIndemnity" class="com.huagu.indemnity.services.SvrOperateIndemnity" scope="prototype">
+    </bean>
+    <!-- 操作赔付单（失效） -->
+    <bean id="SvrInvalidIndemnity" class="com.huagu.indemnity.services.SvrInvalidIndemnity" scope="prototype">
+    </bean>
+    <!-- 后台异常单展示  -->
+    <bean id="SvrGetYcOrder" class="com.huagu.order.service.SvrGetYcOrder" scope="prototype">
+    </bean>
+    <!-- 删除关联运维单  -->
+    <bean id="SvrDeleteYWlist" class="com.huagu.indemnity.services.SvrDeleteYWlist" scope="prototype">
+    </bean>
+     <!-- (添加时) 拿到当前用户 一级关联租赁单  -->
+    <bean id="SvrGetOrderInfo" class="com.huagu.indemnity.services.SvrGetOrderInfo" scope="prototype">
+	 </bean>
+    <!-- 后台展示绑定微信登录用户  -->
+    <bean id="SvrGetAdminUserList" class="com.huagu.userList.service.SvrGetAdminUserList" scope="prototype">
+    </bean>
+    <!-- 后台修改微信登录绑定用户  -->
+    <bean id="SvrUpBinding" class="com.huagu.userList.service.SvrUpBinding" scope="prototype">
+    </bean>
+ 
+     <!-- 根据用户和订单号得到订单信息  -->
+    <bean id="SvrGetOrderInfos" class="com.huagu.indemnity.services.SvrGetOrderInfos" scope="prototype">
+    </bean>
+    <!-- 转手工结算  -->
+    <bean id="SvrToHandSettle" class="com.huagu.indemnity.services.SvrToHandSettle" scope="prototype">
+    </bean>
+    
+    <!-- 手工结算  -->
+    <bean id="SvrHandSettle" class="com.huagu.indemnity.services.SvrHandSettle" scope="prototype">
+	</bean>
+    <!-- 修改上报运维征信单标记状态  -->
+    <bean id="SvrUpOperateStatus" class="com.huagu.operate.service.SvrUpOperateStatus" scope="prototype">
+    </bean>
+    <!-- 查询异常上报单  -->
+    <bean id="SvrGetOperateReported" class="com.huagu.operate.service.SvrGetOperateReported" scope="prototype">
+    </bean>
+    <!-- 得到最近一次的赔付单号 -->
+    <bean id="SvrGetLastPayID" class="com.huagu.indemnity.services.SvrGetLastPayID" scope="prototype">
+    </bean>
+    <!-- 得到所有用户的捐赠订单 -->
+    <bean id="SvrGetUserDonationOrder" class="com.huagu.userList.service.SvrGetUserDonationOrder" scope="prototype">
+    </bean>
+    <!--添加运费模板 -->
+    <bean id="SvrAddStandard" class="com.huagu.operate.service.SvrAddStandard" scope="prototype">
+    </bean>
+    <!--查看运费模板列表 -->
+    <bean id="SvrQueryStandardList" class="com.huagu.operate.service.SvrQueryStandardList" scope="prototype">
+    </bean>
+    <!--删除运费模板-->
+    <bean id="SvrDelStandard" class="com.huagu.operate.service.SvrDelStandard" scope="prototype">
+    </bean>
+    <!--修改运费模板-->
+    <bean id="SvrUpdateStandard" class="com.huagu.operate.service.SvrUpdateStandard" scope="prototype">
+    </bean>
+    <!--得到代理商所属区域 -->
+    <bean id="SvrGetAgentArea" class="com.huagu.agentAndCom.services.SvrGetAgentArea" scope="prototype">
+    </bean>
+	<!--个人交易记录信息 -->
+    <bean id="SvrGetPerRecords" class="com.huagu.personalInfo.services.SvrGetPerRecords" scope="prototype">
+    </bean>
+    <!--个人租赁订单信息 -->
+    <bean id="SvrGetperLeaseOrders" class="com.huagu.personalInfo.services.SvrGetperLeaseOrders" scope="prototype">
+    </bean>
+	<!--个人购买订单信息 -->
+    <bean id="SvrGetBuyOrders" class="com.huagu.personalInfo.services.SvrGetBuyOrders" scope="prototype">
+    </bean>
+    <!--个人客户邀请 -->
+    <bean id="SvrGetcustomerInvitation" class="com.huagu.personalInfo.services.SvrGetcustomerInvitation" scope="prototype">
+    </bean>
+    <!--个人客户邀请 -->
+    <bean id="SvrGetFinanceOvervicw" class="com.huagu.myWallet.services.SvrGetFinanceOvervicw" scope="prototype">
+    </bean>
+    <!--个人购买订单详情查看 -->
+    <bean id="SvrBuyOrderDetails" class="com.huagu.personalInfo.services.SvrBuyOrderDetails" scope="prototype">
+    </bean>
+	<!--拿到要修改得订单号 -->
+    <bean id="SvrGetBuyOrder" class="com.huagu.personalInfo.services.SvrGetBuyOrder" scope="prototype">
+    </bean>
+	<!--修改物流单号 -->
+    <bean id="SvrUpdateNumber" class="com.huagu.jiFenAndSign.services.SvrUpdateNumber" scope="prototype">
+    </bean>
+	<!--修改物流单号 -->
+    <!-- <bean id="SvrUpdateNumber" class="com.huagu.personalInfo.services.SvrAddJiFen" scope="prototype">
+    </bean> -->
+	<!--追加积分 -->
+    <bean id="SvrAddPerJiFen" class="com.huagu.personalInfo.services.SvrAddPerJiFen" scope="prototype">
+    </bean>
+    <!-- 查询平台账户交易记录 -->
+    <bean id="SvrGetAccountRecordLog" class="com.huagu.myWallet.services.SvrGetAccountRecordLog" scope="prototype">
+    </bean>
+    <!-- 添加平台账户交易记录 -->
+    <bean id="SvrRecordLog" class="com.huagu.myWallet.services.SvrRecordLog" scope="prototype">
+    </bean>
+    <!-- 购买订单查询展示 -->
+    <bean id="SvrBuyOrdersQuery" class="com.huagu.order.service.SvrBuyOrdersQuery" scope="prototype">
+    </bean>
+    <!-- 购买订单详情查看 -->
+    <bean id="SvrBuyOrdersDetails" class="com.huagu.my.service.SvrBuyOrdersDetails" scope="prototype">
+	</bean>
+    <!-- 添加/减少平台账户余额并追加平台操作记录  -->
+    <bean id="SvrAddAccountMoney" class="com.huagu.pay.service.SvrAddAccountMoney" scope="prototype">
+    </bean>
+    <!-- 查询平台用户昨日充值金额  -->
+    <bean id="SvrGetFundsAccount" class="com.huagu.troubleshooting.service.SvrGetFundsAccount" scope="prototype">
+    </bean>
+    <!-- 查询日账单所有信息  -->
+    <bean id="SvrGetDayBill" class="com.huagu.troubleshooting.service.SvrGetDayBill" scope="prototype">
+    </bean>
+    <!-- 查询社区账单所有信息  -->
+    <bean id="SvrGetCommBill" class="com.huagu.troubleshooting.service.SvrGetCommBill" scope="prototype">
+    </bean>
+    <!-- 查询机构账单所有信息  -->
+    <bean id="SvrGetMechBill" class="com.huagu.troubleshooting.service.SvrGetMechBill" scope="prototype">
+    </bean>
+    <!-- 赔付单展示列表  -->
+    <bean id="SvrIndemnityList" class="com.huagu.indemnity.services.SvrIndemnityList" scope="prototype">
+    </bean>
+    <!-- 退货单列表查询  -->
+    <bean id="SvrReturnGoodsOrder" class="com.huagu.order.service.SvrReturnGoodsOrder" scope="prototype">
+    </bean>
+    <!-- 查询取货列表查询  -->
+    <bean id="SvrGetQhOrder" class="com.huagu.order.service.SvrGetQhOrder" scope="prototype">
+	</bean>
+    <!-- 捐赠单列表查询  -->
+    <bean id="SvrDonationsQuery" class="com.huagu.donation.services.SvrDonationsQuery" scope="prototype">
+    </bean>
+    <!-- 租赁柜归还订单  -->
+    <bean id="SvrCabinetOrdersQuery" class="com.huagu.order.service.SvrCabinetOrdersQuery" scope="prototype">
+    </bean>
+    <!-- 快递归还订单  -->
+    <bean id="SvrExpressOrdersQuery" class="com.huagu.order.service.SvrExpressOrdersQuery" scope="prototype">
+    </bean>
+    <!-- 查询后台客户认证资料  -->
+    <bean id="SvrGetClientLog" class="com.huagu.creditManagement.service.SvrGetClientLog" scope="prototype">
+    </bean>
+    <!-- 查询后台征信和订单关联列表  -->
+    <bean id="SvrGetClientAndOrder" class="com.huagu.creditManagement.service.SvrGetClientAndOrder" scope="prototype">
+    </bean>
+    <!-- 查询活体映像认证资料  -->
+    <bean id="SvrGetLivingBody" class="com.huagu.creditManagement.service.SvrGetLivingBody" scope="prototype">
+    </bean>
+    <!--按租赁单查询关联单 -->
+    <bean id="SvrLeaseOrdersQuery" class="com.huagu.order.service.SvrLeaseOrdersQuery" scope="prototype">
+    </bean>
+    <!--按社区归属查询订单 -->
+    <bean id="SvrCommOrdersQuery" class="com.huagu.order.service.SvrCommOrdersQuery" scope="prototype">
+    </bean>
+    <!--按物品归属机构查询订单 -->
+    <bean id="SvrHomeOrdersQuery" class="com.huagu.order.service.SvrHomeOrdersQuery" scope="prototype">
+    </bean>
+    <!-- 消息管理，消息详情-->
+	<bean id="SvrNewslist.getNewsDetails" class="com.huagu.newslist.services.SvrNewslist" scope="prototype">
+	<property name="funcCode" value="getNewsDetails"></property>
+	</bean>
+	<!--检查用户是否有订单-->
+    <bean id="SvrCheckUserOrder" class="com.huagu.indemnity.services.SvrCheckUserOrder" scope="prototype">
+    </bean>
+    <!--同意退货-->
+    <bean id="SvrAgreeReturnGoods" class="com.huagu.order.service.SvrAgreeReturnGoods" scope="prototype">
+    </bean>
+       <!--根据国家查省份-->
+    <bean id="SvrQueryProvince" class="com.huagu.agentAndCom.services.SvrQueryProvince" scope="prototype">
+    </bean>
+     <!--根据省份查询城市-->
+    <bean id="SvrCityShow" class="com.huagu.agentAndCom.services.SvrCityShow" scope="prototype">
+    </bean>
+      <!--根据城市查询区域-->
+    <bean id="SvrAreaShow" class="com.huagu.agentAndCom.services.SvrAreaShow" scope="prototype">
+    </bean>
+
+        <!--得到要处理的退货订单-->
+    <bean id="SvrGetHandOrder" class="com.huagu.order.service.SvrGetHandOrder" scope="prototype">
+    </bean>
+       <!--对退货订单进行退货处理-->
+    <bean id="SvrHandOrder" class="com.huagu.order.service.SvrHandOrder" scope="prototype">
+    </bean>
+      <!--租赁柜归还，发送催促消息-->
+    <bean id="SvrSendMessage" class="com.huagu.order.service.SvrSendMessage" scope="prototype">
+    </bean>
+
+	<!-- 运维，公益柜组-->
+	<bean id="SvrGongYiCabinet" class="com.huagu.maintain.service.SvrGongYiCabinet" scope="prototype">
+	</bean>
+	<!-- 运维，公益物品-->
+	<bean id="SvrgetGYCabinet" class="com.huagu.maintain.service.SvrgetGYCabinet" scope="prototype">
+	</bean>
+	<!-- 运维，公益柜组-->
+	<bean id="SvrChangeAdress" class="com.huagu.maintain.service.SvrChangeAdress" scope="prototype">
+	</bean>
+	<!-- 运维，公益柜组-->
+	<bean id="SvrCommunityName" class="com.huagu.maintain.service.SvrCommunityName" scope="prototype">
+	</bean>
+	<!-- 运维，公益柜组详情-->
+	<bean id="SvrCabinetDetail" class="com.huagu.maintain.service.SvrCabinetDetail" scope="prototype">
+	</bean>
+	<!-- 运维，公益柜组详情总数-->
+	<bean id="SvrConuntDetail" class="com.huagu.maintain.service.SvrConuntDetail" scope="prototype">
+	</bean>
+	<!-- 运维，公益捐赠详情-->
+	<bean id="SvrJZDetail" class="com.huagu.maintain.service.SvrJZDetail" scope="prototype">
+	</bean>
+	<!-- 运维，历史收货-->
+	<bean id="SvrHistoryList" class="com.huagu.maintain.service.SvrHistoryList" scope="prototype">
+	</bean>
+	<!-- 银行卡认证-->
+	<bean id="SvrBankCards" class="com.huagu.box.manage.services.SvrBankCards" scope="prototype">
+	</bean>
+	<!-- 添加银行卡-->
+	<bean id="SvrAddBankCard" class="com.huagu.addBank.services.SvrAddBankCard" scope="prototype">
+	</bean>
+	 <!-- 查询绑定银行卡列表 -->
+    <bean id="SvrBankCardList.getBankCardList" class="com.huagu.addBank.services.SvrBankCardList" scope="prototype">
+        <property name="funcCode" value="getBankCardList"></property>
+    </bean>
+     <!-- 删除绑定银行卡 -->
+    <bean id="SvrBankCardList.delBankCard" class="com.huagu.addBank.services.SvrBankCardList" scope="prototype">
+        <property name="funcCode" value="delBankCard"></property>
+    </bean>
+	<!--查询在租订单-->
+	<bean id="SvrQueryRentigOrders" class="com.huagu.maintain.service.SvrQueryRentigOrders" scope="prototype">
+	</bean>
+	<!--查询要转赔付的订单-->
+	<bean id="SvrGetRemrOrder" class="com.huagu.maintain.service.SvrGetRemrOrder" scope="prototype">
+	</bean>
+	<!--转赔付，添加赔付单-->
+	<bean id="SvrAddIndemuity" class="com.huagu.maintain.service.SvrAddIndemuity" scope="prototype">
+	</bean>
+	<!--将导入excel的信息的数据插入数据库-->
+	<bean id="SvrAddExcelInfo" class="com.huagu.creditManagement.service.SvrAddExcelInfo" scope="prototype">
+	</bean>
+	<!-- 后台增加反馈 -->
+	<bean id="SvrFeedBackYunWei.addView" class="com.huagu.my.service.SvrFeedBackYunWei"
+		scope="prototype">
+		<property name="funcCode" value="addView"></property>
+	</bean>
+	<!-- 根据芝麻信用判定减免金额-->
+	<bean id="SvrSesameQuery.sesameQuery" class="com.huagu.my.service.SvrSesameQuery"
+		scope="prototype">
+		<property name="funcCode" value="sesameQuery"></property>
+	</bean>
+	<!-- 指定柜子内查询箱子-->
+	<bean id="SvrCabinetDetail.CabinetDetail" class="com.huagu.box.front.services.SvrCabinetDetail"
+		scope="prototype">
+		<property name="funcCode" value="CabinetDetail"></property>
+	</bean>
+</beans>
+

@@ -1,0 +1,32 @@
+/*
+首页*/
+
+#main_user,#main_mesg{
+    width: 100%;
+    height: 300px;
+}
+.from-box{
+    height: 380px;
+    margin-bottom: 40px;
+}
+.lf_box,.rg_box{
+    width: 450px;
+}
+.newmesg-list li{
+    padding: 0 20px;
+    height: 33px;
+    line-height: 33px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.lf_box .tip-box .nums{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}

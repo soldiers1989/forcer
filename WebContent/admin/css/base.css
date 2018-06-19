@@ -1,0 +1,368 @@
+﻿@charset "utf-8";
+/*Reset www.toprand.net*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'微软雅黑';
+}
+
+html, div, ol, ul, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, img, form, embed, label, b {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+img {
+    border: none;
+}
+
+ol li, ul li {
+    list-style: none;
+}
+
+.cls {
+    clear: both;
+    line-height: 0px!important;
+    height: 0px!important;
+    font-size: 0px!important;
+}
+
+select, input {
+	vertical-align: middle;
+	font-size: 12px;
+	font-family: Arial, "\5FAE\8F6F\96C5\9ED1";
+}
+
+.hidden { 
+	display: none;
+}
+
+i {
+	font-style: normal;
+}
+
+html, body { 
+	-webkit-text-size-adjust: none;
+}
+
+table { 
+	border-collapse: collapse;
+}
+
+.clear {
+	zoom: 1;
+}
+
+.clear:after { 
+	content: ''; display: block;clear: both;
+}
+
+.pos { 
+	position: relative;
+}
+
+/*字体*/
+.Arial {
+	font-family: "Arial", Helvetica, sans-serif;
+}
+
+.yahei {
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.song {
+	font-family: "\5B8B\4F53";
+}
+
+
+
+/*颜色*/
+.hei {
+	color: #000;
+}
+
+.red {
+	color: #942823 !important;
+}
+
+.gary {
+	color: #b3b2b2;
+}
+
+.blue {
+	color: #064b80;
+}
+
+/*链接*/
+a { 
+	color: #4c4c4c; 
+	text-decoration: none;
+	hide-focus: expression( this.hideFocus=true );
+	outline: none;
+}
+
+a:hover {
+	color: #48b3bd;
+}
+
+a:active {
+	color: #48b3bd;
+
+}
+p {
+	color: #4c4c4c;
+}
+/*basic*/
+html {
+    height:100%;
+    font-size: 63%;
+}
+
+body { 
+	min-width: 1360px; 
+	height:100%;
+	font-family: Arial, "\5B8B\4F53";
+	max-width:1920px;
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 20px;
+  	margin: 0 auto;
+  	overflow-y:hidden;
+  	overflow-x:auto;
+ }
+/*text*/
+.b {
+	font-weight: bold;
+}
+
+.em {
+	text-indent: 2em;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.tc { 
+	text-align: center;
+}
+
+.cf:after{ 
+	content: ''; 
+	height: 0; 
+	display: block; 
+	clear: both;
+	visibility: hidden; 
+ }
+/* 以上为样式基础样式重置 */
+
+/* 背景主色 */
+.min-bg {
+    background: #48b2bd;
+}
+.min-col{
+    color:#48b2bd;
+}
+.cl-666 {
+    color: #666;
+}
+.cl-999 {
+    color:#999;
+}
+.cl-red{
+    color: red;
+}
+.cl-green{
+    color:#48b2bd!important;
+}
+/* 边框线颜色 */
+.ui-bd-green{
+    border: 1px solid #48b2bd;
+}
+.ui-bd-gray{
+    border-top: 1px solid #e6e6e6;
+}
+.ui-bd-t {
+    border-top: 1px solid #e6e6e6;
+}
+
+.ui-bd-l {
+    border-left: 1px solid #e6e6e6;
+}
+
+.ui-bd-r {
+    border-right: 1px solid #e6e6e6;
+}
+
+.ui-bd-b {
+    border-bottom: 1px solid #e6e6e6;
+}
+/* 边框线颜色 */
+.ui-bd-t {
+    border-top: 1px solid #e6e6e6;
+}
+
+.ui-bd-l {
+    border-left: 1px solid #e6e6e6;
+}
+
+.ui-bd-r {
+    border-right: 1px solid #e6e6e6;
+}
+
+.ui-bd-b {
+    border-bottom: 1px solid #e6e6e6;
+}
+.ui-bd-radiu{
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px; ;
+}
+.ui-pd-5x8{
+    padding: 5px 8px;
+}
+/* 两边边距 */
+.km-md {
+    margin: auto 10px;
+}
+
+.km-pd {
+    padding: 0 10px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tc {
+    text-align: center;
+}
+.tr{
+    text-align: right;
+}
+.tl{
+    text-align: left;
+}
+/* 文字超过隐藏 */
+.text-oven{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.mt_10{
+    margin-top:10px;
+}
+.mb_10{
+    margin-bottom:10px;
+}
+.ml_10{
+    margin-left:10px;
+}
+.mr_10{
+    margin-right:10px;
+}
+.pt_10{
+    padding-top:10px;
+}
+.pb_10{
+    padding-bottom:10px;
+}
+.pl_10{
+    padding-left:10px;
+}
+.pr_10{
+    padding-right:10px;
+}
+
+
+
+.mt_20{
+    margin-top:20px;
+}
+.mb_20{
+    margin-bottom:20px;
+}
+.ml_20{
+    margin-left:20px;
+}
+.mr_20{
+    margin-right:20px;
+}
+.pt_20{
+    padding-top:20px;
+}
+.pb_20{
+    padding-bottom:20px;
+}
+.pl_20{
+    padding-left:20px;
+}
+.pr_20{
+    padding-right:20px;
+}
+/*字体大小*/
+.f10 {font-size: 10px;}
+.f12 { font-size: 12px;}
+.f13 {font-size: 13px;}
+.f14 { font-size: 14px;}
+.f15 {font-size: 15px;}
+.f16 {font-size: 16px;}
+.f18 {font-size: 18px;}
+.f20 {font-size: 20px;}
+.f22 {font-size: 22px;}
+.f36 {font-size: 36px;}
+/*字体颜色*/
+.font_gray{color:gray;}
+.font_disable{
+	background: #ddd!important;
+}
+
+/* 机构公司名等宽度 */
+.mechanism_width{
+	width:120px;
+}
+.content_width{
+	width:560px;
+}
+.keyWord{
+	width:160px !important;
+}
+#component4 input[type="submit"],#component7 input[type="submit"],#component8 input[type="submit"]{
+	margin-left:105px;
+}
+#component9 input[type="submit"]{
+	text-align:center !important;
+}
+.zx_load img{
+	width:2rem;
+}
+.zx_load{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.6;
+	border: 1px solid red;
+	top: 0px;
+	z-index:3;
+}
+.zx_load div{
+	width: 8rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    top: 48%;
+    margin-left: -4rem;
+}
+
+

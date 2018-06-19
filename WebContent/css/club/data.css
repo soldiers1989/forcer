@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document*/
+*{
+	font-family:微软雅黑;
+}
+body{
+	padding:0;
+	margin:0;
+	font-size:12px;
+}
+a{text-decoration:none;}a:link,a:visited{text-decoration:none;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal;font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;overflow:hidden;clear:both; height:0;visibility:hidden;content:"";}
+.clear{clear:"both;"}
+/*float*/
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.account-box{
+	background:#fff;
+	/* padding-top:15px; */
+}
+.account-title{
+	height: .68rem;
+    line-height: .68rem;
+    width: 92%;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    boder-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.f-btn-fhby{
+	height:.68rem;
+	line-height:.68rem;
+	color:#f77b10;
+	font-size:.238rem;
+	display:block;
+	width:20%;
+	text-align:center;
+	border-radius:4px;
+	cursor:pointer;
+}
+.f-btn-jian{
+	height:.68rem;
+	line-height:.68rem;
+	border-right:0px;
+	text-align:center;
+	width:40%;
+	color:#666;
+	border-radius:4px;
+	position:relative;
+	left:2px;
+	cursor:pointer;
+}
+.f-btn-jia{
+	height:.68rem;
+	line-height:.68rem;
+	text-align:center;
+	width:15%;
+	color:#666;
+	border-radius:4px;
+	position:relative;
+	left:-2px;
+	cursor:pointer;
+}
+.f-riqi{
+	width:1.2rem;
+	color:#666;
+	font-size:.238rem;
+	text-align:center;
+	height:.68rem;
+	line-height:.68rem;
+	display:block;
+}
+.f-rili-th{
+   float:left;
+   width:14.25%;
+   text-align:center;
+   line-height:46px;
+   height:46px;
+   color:#4d4d4d;
+   font-size:15px;
+}
+.month-pre{
+   display:inline-block;
+   width:100%;
+   height:100%;
+   background-image: url(/img/next.png);
+   background-repeat:no-repeat;
+   background-position: 17%;
+    background-size: 7% auto;
+   transform:rotate(180deg);
+   -webkit-transform:rotate(180deg);
+   -moz-transform:rotate(180deg);
+   -ms-transform:rotate(180deg);
+   -o-transform:rotate(180deg);
+}
+.month-next{
+   display:inline-block;
+   width:100%;
+   height:100%;
+   background-image: url(/img/next.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:18% auto; 
+}
+.f-Sign{
+   position:absolute;
+   left:0;
+   top:150px;
+   width:240px;
+   height:150px;
+   overflow-y:auto;
+   border:1px solid #333;
+   background:#fff;
+   z-index:1000;
+   display:none;
+}
+.f-rili-table tbody td{background:#fff;position:relative;}
+.f-rili-table tbody tr{border-bottom:1px dashed #ccc;}
+.f-rili-table .f-today{background-color:#faf1de;}
+.f-rili-table .f-on{background-color:cornflowerblue;color:#fff;}
+.f-number{cursor:pointer;}
+.f-rili-table{width:100%;}
+.f-rili-th{
+	float:left;
+	width:14.25%;
+	text-align:center;
+	line-height:46px;
+	height:46px;
+	color:#333;
+	font-size:16px;
+}
+.f-td{
+	float: left;
+    width: 14.25%;
+    text-align: center;
+    height: .782rem;
+    line-height: .782rem;
+    position: relative;
+    font-size: .221rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #666666;
+}
+ .f-yuan{
+	position: absolute;
+    width: .51rem;
+    height: .51rem;
+    top: 19%;
+    left: 28%;
+    /* margin-left: -5px; */
+    background-image: url(/img/signed.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    display:none;
+} 
+.active .f-yuan{
+	display:block;
+}
+.active .f-day{
+	color: white;
+}
+.sign_everyDay{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+.sign_everyDay .parent_{
+	width: 100%; 
+	height:3.791rem; 
+	position:relative;
+	background-image: url("/img/my_sign.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%; 
+}
+.sign_everyDay .child_{
+	width: 1.87rem;
+	height: 1.87rem;
+	background-color: rgba(255, 255, 255, 0.27);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	position: absolute;
+	top: .51rem;
+	left: 2.261rem;
+	text-align: center;
+	line-height: 2.6rem;
+}
+.sign_everyDay .sign_btn{
+	width: 1.581rem;
+	height: 1.581rem;
+	background-color: #fff;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	line-height: .51rem;
+	color: #fd85a5;
+	padding-top: .425rem;
+	display: inline-block;
+}
+.f-day{
+    position: absolute;
+    left: .36rem;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
